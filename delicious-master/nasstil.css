@@ -1,0 +1,29 @@
+.naslogo
+{
+    max-width: 15%;
+    max-height: 15%;
+    
+    }
+
+.padding-filter
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.diff-width
+{
+    width: 80%;
+}
+
+#hero
+{
+    padding-top:20px;
+    text-align: center;
+}
+
+#loginforma{
+    display: inline-block;
+    position: center;
+}
+
