@@ -19,37 +19,37 @@
     <link rel="stylesheet" href="nasstil.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="skripta.js"></script>
+   
     <script src="prevod.js"></script>
-    
-    
+    <script src="login.js"></script>
+    <script src="register.js"></script>
+    <script src="skripta.js"></script>
+
+
 </head>
 
-<body onload="getLanguage()">
+<body onload="initHomePage()">
     <!-- Preloader -->
     <div id="preloader">
         <i class="circle-preloader"></i>
         <img src="img/core-img/salad.png" alt="">
     </div>
 
-    
-
-    <!-- ##### Header Area Start ##### -->
     <header class="header-area">
 
         <!-- Navbar Area -->
         <div class="delicious-main-menu">
-            
+
             <div class="classy-nav-container breakpoint-off">
-                
+
                 <div class="container">
-                    
+
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="deliciousNav">
-                        <a class="nav-brand" href="index.html"><img  src="img/core-img/logo.png" alt=""></a>
+                        <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
 
                         <!-- Logo -->
-                        
+
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -68,32 +68,35 @@
                             <div class="classynav">
                                 <ul>
                                     <li class="active"><a data-lang="home" href="index.html">Home</a></li>
-                                    <li ><a data-lang="receipes" href="receipes.html">Receipes</a>
+                                    <li><a data-lang="receipes" href="receipes.html">Receipes</a>
                                         <ul class="dropdown" id="padajuca">
-                                            <li><a data-lang="appetizer" href="#">Appetizer</a></li>
-                                            <li><a href="about.html">Main course</a></li>
-                                            <li><a href="blog-post.html">Dessert</a></li>
-                                            <li><a href="receipe-post.html">Snack</a></li>
-                                           
-                                            
+                                            <li><a data-lang="appetizer" href="#" onclick="changeGroup('appetizer')">Appetizer</a></li>
+                                            <li><a data-lang="maincourse" href="#" onclick="changeGroup('maincourse')">Main course</a></li>
+                                            <li><a data-lang="dessert" href="#" onclick="changeGroup('dessert')">Dessert</a></li>
+                                            <li><a data-lang="snack" href="#" onclick="changeGroup('snack')">Snack</a></li>
+
+
                                         </ul>
                                     </li>
-                                    
-                                    <li><a href="receipe-post.html">Add receipe</a></li>
-                                    <li><a href="receipe-post.html">My profile</a>
-                                        <ul class="dropdown">
-                                    <li><a href="login.html">Log in</a>
-                                        
-                                        <li><a href="signup.html">Sign up</a>
+
+                                    <li><a data-lang="addrecipe" href="#">Add receipe</a></li>
+                                    <li><a data-lang="myprofile" href="#">My profile</a>
+                                        <ul id="logsnav" class="dropdown">
+                                            <li id="loginbut"><a data-lang="login" href="login.html">Log in</a>
+
+                                            <li id="signupbut"><a data-lang="signup" href="signup.html">Sign up</a>
+                                            <li id="logoutbut"><a data-lang="logout" href="#" onclick="logOut()">Log out</a>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">About us</a></li>
-                                    
-                                    <li><a href="#">Language</a>
+                                    <li><a data-lang="aboutus" href="#">About us</a></li>
+
+                                    <li><a data-lang="language" href="#">Language</a>
                                         <ul class="dropdown">
-                                            <li ><a href="#" onclick="setLanguage('sr')"><span class="flag-icon flag-icon-rs"></span>&nbsp;Serbian</a></li>
-                                            <li><a href="#" onclick="setLanguage('en')"><span class="flag-icon flag-icon-gb"></span>&nbsp;English</a></li>
-                       
+                                            <li><a href="#" onclick="setLanguage('sr')"><span
+                                                        class="flag-icon flag-icon-rs"></span>&nbsp;Serbian</a></li>
+                                            <li><a  href="#" onclick="setLanguage('en')"><span
+                                                        class="flag-icon flag-icon-gb"></span>&nbsp;English</a></li>
+
                                         </ul>
                                     </li>
                                 </ul>
@@ -112,12 +115,9 @@
         </div>
     </header>
 
+    
 
 
-
-
-
-    <!-- ##### Header Area End ##### -->
 
     <!-- ##### Hero Area Start ##### -->
     <section class="hero-area">
@@ -129,8 +129,11 @@
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Delicios Homemade Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
-                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
+                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur
+                                    sem eget dui tristique, ac posuere arcu varius.</p>
+                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
+                                    Receipe</a>
                             </div>
                         </div>
                     </div>
@@ -144,8 +147,11 @@
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Delicios Homemade Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
-                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
+                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur
+                                    sem eget dui tristique, ac posuere arcu varius.</p>
+                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
+                                    Receipe</a>
                             </div>
                         </div>
                     </div>
@@ -159,8 +165,11 @@
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Delicios Homemade Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
-                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
+                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur
+                                    sem eget dui tristique, ac posuere arcu varius.</p>
+                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
+                                    Receipe</a>
                             </div>
                         </div>
                     </div>
@@ -341,7 +350,9 @@
                     <!-- Cta Content -->
                     <div class="cta-content text-center">
                         <h2>Gluten Free Receipies</h2>
-                        <p>Fusce nec ante vitae lacus aliquet vulputate. Donec scelerisque accumsan molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras sed accumsan neque. Ut vulputate, lectus vel aliquam congue, risus leo elementum nibh</p>
+                        <p>Fusce nec ante vitae lacus aliquet vulputate. Donec scelerisque accumsan molestie. Vestibulum
+                            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras sed
+                            accumsan neque. Ut vulputate, lectus vel aliquam congue, risus leo elementum nibh</p>
                         <a href="#" class="btn delicious-btn">Discover all the receipies</a>
                     </div>
                 </div>
@@ -606,12 +617,14 @@
                     <div class="newsletter-area">
                         <h4>Subscribe to our newsletter</h4>
                         <!-- Form -->
-                        <div class="newsletter-form bg-img bg-overlay" style="background-image: url(img/bg-img/bg1.jpg);">
+                        <div class="newsletter-form bg-img bg-overlay"
+                            style="background-image: url(img/bg-img/bg1.jpg);">
                             <form action="#" method="post">
                                 <input type="email" name="email" placeholder="Subscribe to newsletter">
                                 <button type="submit" class="btn delicious-btn w-100">Subscribe</button>
                             </form>
-                            <p>Fusce nec ante vitae lacus aliquet vulputate. Donec sceleri sque accumsan molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
+                            <p>Fusce nec ante vitae lacus aliquet vulputate. Donec sceleri sque accumsan molestie.
+                                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
                         </div>
                     </div>
                 </div>
@@ -636,16 +649,16 @@
                     </div>
                     <!-- Copywrite -->
                     <p class="text-right">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>, 
-                        Димитрије Поповић, Игор Дукић, 
-                        <br> 
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>,
+                        Димитрије Поповић, Игор Дукић,
+                        <br>
                         Одсек за софтверско инжењерство Електротехничког факултета Универзитета у Београду
                     </p>
                 </div>
             </div>
         </div>
     </footer>
-    
 
 
     <!-- jQuery-2.2.4 js -->
@@ -658,6 +671,7 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+
 </body>
 
 </html>

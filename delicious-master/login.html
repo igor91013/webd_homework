@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="nasstil.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
     
 </head>
 
@@ -157,7 +158,7 @@
                       type="username"
                       name="username"
                       class="form-control"
-                      id="username"
+                      id="usernamelog"
                       required
                     />
                   </div>
@@ -167,7 +168,7 @@
                       type="password"
                       class="form-control"
                       name="password"
-                      id="password"
+                      id="passwordlog"
                       required
                     />
                     
@@ -175,7 +176,7 @@
                 </div>
   
                 <div class="text-center">
-                    <a type="submit" href="#" class="btn delicious-btn m-1">Login</a>
+                    <a onclick=logIn() href="#" class="btn delicious-btn m-1">Log in</a>
                 </div>
               </form>
             </div>
@@ -225,7 +226,9 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
     <script src="skripta.js"></script>
-    <script src="recipes.js"></script>
+    <script src="receipes.js"></script>
+    <script src="login.js"></script>
+    <script src="register.js"></script>
 </body>
 
 </html>

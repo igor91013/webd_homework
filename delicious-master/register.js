@@ -1,3 +1,5 @@
+
+
 let korisnici = 
 [
     {
@@ -27,9 +29,11 @@ function register(){
         
         let korisnik= {username: username, password: encrpas(password)}
         korisnici.push(korisnik)
-        sessionStorage.setItem(username, encrpas(password));
+        console.log(korisnici)
+        //sessionStorage.setItem(username, encrpas(password));
        
         localStorage.setItem("korisnici", JSON.stringify(korisnici));
+        alert("uspesno ste registrovali korisnika");
         
 
      

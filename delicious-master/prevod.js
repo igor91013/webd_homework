@@ -13,6 +13,7 @@ function setLanguage(lang)
 function textInput()
 {
     for (const property in data) {
+        
         $("body").find(`[data-lang="${property}"]`).text(data[property])
     }
 

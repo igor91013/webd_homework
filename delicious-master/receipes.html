@@ -19,10 +19,15 @@
     <link rel="stylesheet" href="nasstil.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+    <script src="prevod.js"></script>
+    <script src="login.js"></script>
+    <script src="register.js"></script>
+    <script src="skripta.js"></script>
+   
+
 </head>
 
-<body">
+<body onload="initReceipesPage()">
     <!-- Preloader -->
     <div id="preloader">
         <i class="circle-preloader"></i>
@@ -49,19 +54,19 @@
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
 
-        
-
         <!-- Navbar Area -->
         <div class="delicious-main-menu">
+
             <div class="classy-nav-container breakpoint-off">
+
                 <div class="container">
-                    
+
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="deliciousNav">
-                        <a class="nav-brand" href="index.html"><img  src="img/core-img/logo.png" alt=""></a>
+                        <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
 
                         <!-- Logo -->
-                        
+
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -71,8 +76,6 @@
                         <!-- Menu -->
                         <div class="classy-menu">
 
-                            
-
                             <!-- close btn -->
                             <div class="classycloseIcon">
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
@@ -81,24 +84,41 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li class="active"><a id = "homepage" href="index.html">Home</a></li>
-                                    <li ><a href="receipes.html">Receipes</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#" onclick="changeGroup('appetizer')">Appetizer</a></li>
-                                            <li><a href="#" onclick="changeGroup('maincourse')">Main course</a></li>
-                                            <li><a href="#" onclick="changeGroup('dessert')">Dessert</a></li>
-                                            <li><a href="#" onclick="changeGroup('snack')">Snack</a></li> 
+                                    <li class="active"><a data-lang="home" href="index.html">Home</a></li>
+                                    <li><a data-lang="receipes" href="receipes.html">Receipes</a>
+                                        <ul class="dropdown" id="padajuca">
+                                            <li><a data-lang="appetizer" href="#"
+                                                    onclick="changeGroup('appetizer')">Appetizer</a></li>
+                                            <li><a data-lang="maincourse" href="#"
+                                                    onclick="changeGroup('maincourse')">Main course</a></li>
+                                            <li><a data-lang="dessert" href="#"
+                                                    onclick="changeGroup('dessert')">Dessert</a></li>
+                                            <li><a data-lang="snack" href="#" onclick="changeGroup('snack')">Snack</a>
+                                            </li>
+
+
                                         </ul>
                                     </li>
-                                    
-                                    <li><a href="receipe-post.html">Add receipe</a></li>
-                                    <li><a href="receipe-post.html">My profile</a></li>
-                                    <li><a href="contact.html">About us</a></li>
-                                    <li><a href="#">Language</a>
+
+                                    <li><a data-lang="addrecipe" href="#">Add receipe</a></li>
+                                    <li><a data-lang="myprofile" href="#">My profile</a>
+                                        <ul id="logsnav" class="dropdown">
+                                            <li id="loginbut"><a data-lang="login" href="login.html">Log in</a>
+
+                                            <li id="signupbut"><a data-lang="signup" href="signup.html">Sign up</a>
+                                            <li id="logoutbut"><a data-lang="logout" href="#" onclick="logOut()">Log
+                                                    out</a>
+                                        </ul>
+                                    </li>
+                                    <li><a data-lang="aboutus" href="#">About us</a></li>
+
+                                    <li><a data-lang="language" href="#">Language</a>
                                         <ul class="dropdown">
-                                            <li ><a href="#" onclick="setLanguage('sr')"><span class="flag-icon flag-icon-rs"></span>&nbsp;Serbian</a></li>
-                                            <li><a href="#" onclick="setLanguage('en')"><span class="flag-icon flag-icon-gb"></span>&nbsp;English</a></li>
-                       
+                                            <li><a href="#" onclick="setLanguage('sr')"><span
+                                                        class="flag-icon flag-icon-rs"></span>&nbsp;Serbian</a></li>
+                                            <li><a href="#" onclick="setLanguage('en')"><span
+                                                        class="flag-icon flag-icon-gb"></span>&nbsp;English</a></li>
+
                                         </ul>
                                     </li>
                                 </ul>
@@ -116,6 +136,8 @@
             </div>
         </div>
     </header>
+
+
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
@@ -132,26 +154,28 @@
     </div>
     <!-- ##### Breadcumb Area End ##### -->
 
- <!-- Widget -->
- 
+    <!-- Widget -->
+
     <!-- ##### Blog Area Start ##### -->
     <div class="blog-area ">
         <div class="container">
             <div class="row align-items-center padding-filter">
                 <div class="col-2">
-                    <a href="#" class="btn delicious-btn btn-4 m-1" onclick="sortiraj('rat')">Sort by rating</a>
+                    <a data-lang="sortrat" href="#" class="btn delicious-btn btn-4 m-1" onclick="sortiraj('rat')">Sort by rating</a>
                 </div>
                 <div class="col-2">
-                    <a href="#" class="btn delicious-btn btn-4 m-1 diff-width" onclick="sortiraj('diff')">Sort by difficulty</a>
+                    <a data-lang="sortdif" href="#" class="btn delicious-btn btn-4 m-1 diff-width" onclick="sortiraj('diff')">Sort by
+                        difficulty</a>
                 </div>
                 <div class="col-2 offset-4">
-                    <input class="form-control border border-success" id="search" type="text" placeholder="Type here...">
+                    <input class="form-control border border-success" id="search" type="text"
+                        placeholder="Type here...">
                 </div>
                 <div class="col-2">
-                    <button class="btn delicious-btn btn-4 m-1" onclick="searchRecipes()">Search</button>
+                    <button data-lang="search" class="btn delicious-btn btn-4 m-1" onclick="searchRecipes()">Search</button>
                 </div>
             </div>
-                
+
             <div class="row">
                 <div class="col-12 col-lg-8 offset-lg-2">
                     <div class="blog-posts-area" id="recipes">
@@ -185,9 +209,10 @@
                     </div>
                     <!-- Copywrite -->
                     <p class="text-right">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>, 
-                        Димитрије Поповић, Игор Дукић, 
-                        <br> 
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>,
+                        Димитрије Поповић, Игор Дукић,
+                        <br>
                         Одсек за софтверско инжењерство Електротехничког факултета Универзитета у Београду
                     </p>
                 </div>
@@ -207,8 +232,8 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-    <script src="skripta.js"></script>
-    <script src="recipes.js"></script>
+
+    <script src="receipes.js"></script>
 </body>
 
 </html>
