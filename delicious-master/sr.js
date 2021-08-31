@@ -12,8 +12,9 @@ var data = {
     logout: "Odjavi se",
     aboutus: "O nama",
     language: "Jezik",
-    sortrat: "Sort po ocenama",
-    sortdif: "Sort po težini",
+    sortrat: "Ocene sort",
+    sortdif: "Težina sort",
     search: "Pretraži",
+    best3: "Najbolja 3 recepta",
     
 }
