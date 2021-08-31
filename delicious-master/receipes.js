@@ -7,7 +7,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Prženice",
         rating : "2",
-        difficulty : "beginner"
+        difficulty : "1"
     },
 
     {
@@ -17,7 +17,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Kačamak",
         rating : "5",
-        difficulty : "advanced"
+        difficulty : "3"
     },
 
     {
@@ -27,7 +27,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Proja",
         rating : "4",
-        difficulty : "intermediate"
+        difficulty : "2"
     },
 
     {
@@ -37,7 +37,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Suši",
         rating : "5",
-        difficulty : "advanced"
+        difficulty : "3"
     },
 
     {
@@ -47,7 +47,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Gulaš",
         rating : "3",
-        difficulty : "beginner"
+        difficulty : "1"
     },
 
     {
@@ -57,7 +57,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Musaka",
         rating : "4",
-        difficulty : "intermediate"
+        difficulty : "2"
     },
 
     {
@@ -67,7 +67,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Tulumba",
         rating : "3",
-        difficulty : "intermediate"
+        difficulty : "2"
     },
 
     {
@@ -77,7 +77,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Baklava",
         rating : "1",
-        difficulty : "beginner"
+        difficulty : "1"
     },
 
     {
@@ -87,7 +87,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Banana Split",
         rating : "5",
-        difficulty : "advanced"
+        difficulty : "3"
     },
 
     {
@@ -97,7 +97,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Club Sandwich",
         rating : "5",
-        difficulty : "intermediate"
+        difficulty : "2"
     },
 
     {
@@ -107,7 +107,7 @@ var recipes =
         author : "MojRecept.rs",
         text : "Cezar salata",
         rating : "2",
-        difficulty : "advanced"
+        difficulty : "3"
     },
 
     {
@@ -117,11 +117,12 @@ var recipes =
         author : "MojRecept.rs",
         text : "Voćna salata",
         rating : "1",
-        difficulty : "beginner"
+        difficulty : "1"
     }
 ]
 
 var group = null;
+var loadedRecipes = [];
 
 localStorage.setItem("recipes", JSON.stringify(recipes));
 
@@ -143,6 +144,7 @@ function loadRecipes(rcp)
 {
     removeRecipes();
 
+    loadedRecipes = [];
     let recipes = rcp;
 
     recipes.forEach(recipe => {
@@ -194,7 +196,16 @@ function loadRecipes(rcp)
             let a2 = document.createElement("a");
             a2.href = "#";
             a2.className = "btn delicious-btn m-1";
-            a2.innerHTML = recipe.difficulty;
+            switch(recipe.difficulty)
+            {
+                case "1": a2.innerHTML = "beginner";
+                        break;
+                case "2": a2.innerHTML = "intermediate";
+                        break;
+                case "3": a2.innerHTML = "advanced";
+                        break;
+                default:a2.innerHTML = "unknown";
+            }
  
             div4.appendChild(a1_1);
 
@@ -210,6 +221,8 @@ function loadRecipes(rcp)
             div1.appendChild(div3);
     
             document.getElementById("recipes").appendChild(div1);
+
+            loadedRecipes.push(recipe);
         }
     });
 }
@@ -244,14 +257,36 @@ function searchRecipes()
     loadRecipes(results);
 }
 
-/*function sortiraj(algorithm)
+function sortiraj(algorithm)
 {
-    let pool = [];
-    let divrec = document.getElementById("recipes");
-    while (divrec.lastElementChild) 
+    let button = document.getElementById(algorithm);
+
+    if(algorithm == "rat")
     {
-        pool.push(divrec.lastElementChild);
-        divrec.removeChild(divrec.lastElementChild);
-        alert(pool[0]);
+        if(button.name == "asc")
+        {
+            button.setAttribute("name", "desc");
+            loadedRecipes.sort((a, b) => a.rating - b.rating);
+        }
+        else
+        {
+            button.setAttribute("name", "asc");
+            loadedRecipes.sort((a, b) => b.rating - a.rating);
+        }
     }
-}*/
+    else
+        {
+            if(button.name == "asc")
+            {
+                button.setAttribute("name", "desc");
+                loadedRecipes.sort((a, b) => a.difficulty - b.difficulty);
+            }
+            else
+            {
+                button.setAttribute("name", "asc");
+                loadedRecipes.sort((a, b) => b.difficulty - a.difficulty);
+            }
+        }
+    
+    loadRecipes(loadedRecipes);
+}
