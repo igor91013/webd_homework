@@ -23,6 +23,12 @@ function turnonLS() {
 
 function initHomePage() {
   getLanguage();
+  let korisnici=[]
+  let korisnik={username:"_",password:"_"};
+  korisnici.push(korisnik);
+  if(localStorage.getItem("korisnici")==null){
+    localStorage.setItem("korisnici",JSON.stringify(korisnici));
+  }
   korisnici = JSON.parse(localStorage.getItem("korisnici"));
   if (!sessionStorage.getItem("ulogovan"))
     document.getElementById("logoutbut").style.display = 'none';
