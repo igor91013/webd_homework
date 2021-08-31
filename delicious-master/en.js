@@ -16,5 +16,7 @@ var data = {
     sortdif: "Sort by difficulty",
     search: "Search",
     best3: "The best 3 receipies",
+    ourpartners: "Our partners:",
+    usernamepro: "Username:",
 }
  

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Delicious - Food Blog Template | Blog Post</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nasstil.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    
+    
+</head>
+
+<body onload="initMyprofile()">
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="img/core-img/salad.png" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <!-- Close Btn -->
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="Type any keywords...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
+            
+            <div class="classy-nav-container breakpoint-off">
+                
+                <div class="container">
+                    
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+                        <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+
+                        <!-- Logo -->
+
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li class="active"><a data-lang="home" href="index.html">Home</a></li>
+                                    <li><a data-lang="receipes" href="receipes.html">Receipes</a>
+                                        <ul class="dropdown" id="padajuca">
+                                            <li><a data-lang="appetizer" href="#"
+                                                    onclick="changeGroup('appetizer')">Appetizer</a></li>
+                                            <li><a data-lang="maincourse" href="#"
+                                                    onclick="changeGroup('maincourse')">Main course</a></li>
+                                            <li><a data-lang="dessert" href="#"
+                                                    onclick="changeGroup('dessert')">Dessert</a></li>
+                                            <li><a data-lang="snack" href="#" onclick="changeGroup('snack')">Snack</a>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+
+                                    <li><a data-lang="addrecipe" href="#">Add receipe</a></li>
+                                    <li><a data-lang="myprofile" href="#" onclick="myProfile()">My profile</a>
+                                        <ul id="logsnav" class="dropdown">
+                                            <li id="loginbut"><a data-lang="login" href="login.html">Log in</a>
+
+                                            <li id="signupbut"><a data-lang="signup" href="signup.html">Sign up</a>
+                                            <li id="logoutbut"><a data-lang="logout" href="#" onclick="logOut()">Log
+                                                    out</a>
+                                        </ul>
+                                    </li>
+                                    <li><a data-lang="aboutus" href="#">About us</a></li>
+
+                                    <li><a data-lang="language" href="#">Language</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#" onclick="setLanguage('sr')"><span
+                                                        class="flag-icon flag-icon-rs"></span>&nbsp;Serbian</a></li>
+                                            <li><a href="#" onclick="setLanguage('en')"><span
+                                                        class="flag-icon flag-icon-gb"></span>&nbsp;English</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <!-- Newsletter Form -->
+                                <div class="search-btn">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb2.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+ <!-- Widget -->
+ 
+    <!-- ##### Blog Area Start ##### -->
+    
+
+    
+    <section id="hero" class="kontrola-forme">
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div class="col-12 mt-5 mt-lg-0  align-items-stretch">
+              <form id="loginforma"  >
+                <div class="mx-auto w-40">
+                    
+                  <div>
+                    <label data-lang="usernamepro" for="username">Username:</label>
+                    <a id="profileusername">aaa</a>
+                  </div>
+                  
+                </div>
+  
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+    <!-- ##### Blog Area End ##### -->
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                    <!-- Footer Logo -->
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                    </div>
+                    <!-- Copywrite -->
+                    <p class="text-right">
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>, 
+                        Димитрије Поповић, Игор Дукић, 
+                        <br> 
+                        Одсек за софтверско инжењерство Електротехничког факултета Универзитета у Београду
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    
+    <script src="receipes.js"></script>
+    <script src="login.js"></script>
+    <script src="register.js"></script>
+    <script src="skripta.js"></script>
+    <script src="prevod.js"></script>
+</body>
+
+</html>

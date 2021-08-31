@@ -26,6 +26,7 @@
     <script src="skripta.js"></script>
 
 
+
 </head>
 
 <body onload="initHomePage()">
@@ -84,7 +85,7 @@
                                     </li>
 
                                     <li><a data-lang="addrecipe" href="#">Add receipe</a></li>
-                                    <li><a data-lang="myprofile" href="#">My profile</a>
+                                    <li><a data-lang="myprofile" href="#" onclick="myProfile()">My profile</a>
                                         <ul id="logsnav" class="dropdown">
                                             <li id="loginbut"><a data-lang="login" href="login.html">Log in</a>
 
@@ -223,7 +224,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading">
-                        <h3 data-lang="best3" >The best 3 Receipies</h3>
+                        <h3 data-lang="best3">The best 3 Receipies</h3>
                     </div>
                 </div>
             </div>
@@ -293,18 +294,38 @@
     </section>
 
 
+    <section>
+        <h2 data-lang="ourpartners" id="ourpartners">Our partners: </h2>
+        <hr />
+        
+        <div id="baneri">
+
+
+            <table id="banertabela">
+
+                <tr>
+                    
+                    <td>
+
+                        <a href="http://www.donesi.com"> <img class="banner" src="img/download.png"></a>
+
+                    </td>
+                    <td>
+                        <a href="http://www.alideda.com"> <img class="banner" src="img/unnamed.png"></a>
+                    </td>
+                    <td>
+                        <a href="http://www.carnex.rs"> <img class="banner" src="img/news-default.jpg"></a>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+        <hr />
+    </section>
 
 
 
-    <p>
-        <a href="http://www.nordeus.com" class="nordeus" title="Nordeus" target="_blank">Nordeus</a>
-        <a href="http://www.microsoft.com/serbia/mdcs/default.aspx" class="mdcs" title="MDCS" target="_blank">MDCS</a>
-        <a href="http://www.pstech.co.rs" class="pstech" title="P.S. Tech" target="_blank">P.S. Tech</a>
-        <!-- <a href="http://www.iritel.com" class="iritel" title="Iritel" target="_blank">Iritel</a> -->
-        <a href="http://rs.atos.net/sr-cs/" class="atos" title="Atos" target="_blank">ATOS</a>
-        <!-- <a href="http://www.adacta.rs/" class="adacta" title="Adacta" target="_blank">Adacta</a> -->
-        <a href="http://www.meritsolutions.com/" class="merit" title="Merit" target="_blank">Merit</a>
-    </p>
 
     <footer class="footer-area">
         <div class="container h-100">
@@ -338,6 +359,7 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+
 
 </body>
 

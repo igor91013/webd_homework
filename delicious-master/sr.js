@@ -16,5 +16,7 @@ var data = {
     sortdif: "Težina sort",
     search: "Pretraži",
     best3: "Najbolja 3 recepta",
+    ourpartners: "Naši saradnici:",
+    usernamepro: "Korisničko ime:",
     
 }
