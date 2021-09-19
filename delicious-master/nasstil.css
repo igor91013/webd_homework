@@ -60,4 +60,33 @@
     color:#555;
 }
 
+.breadcrumbs{
+    padding:10px;
+    font-family: sans-serif;
+    
+}
+
+.breadcrumbs__item{
+    display:inline-block;
+   
+}
+
+.breadcrumbs__item:not(:last-of-type)::after{
+content:'>';
+margin:0 5px;
+color: gray
+}
+
+.breadcrumbs__link:hover{
+    text-decoration: underline;
+}
+
+.breadcrumbs__link{
+    color:gray;
+}
+
+.breadcrumbs__link--active{
+    color:black;
+}
+
 
