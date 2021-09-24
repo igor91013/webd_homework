@@ -1,0 +1,45 @@
+<!-- Single Preparation Step -->
+    <div class="single-preparation-step d-flex">
+        <h4>01.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+    </div>
+
+<!-- Custom Checkbox -->
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck2">
+        <label class="custom-control-label" for="customCheck2">2 large eggs</label>
+    </div>
+
+<!-- Single Review -->
+</div>
+                <div class="row">
+                    <div class="col-8">
+                        <h4>Title</h4>
+                    </div>
+                    <div class="col-3 offset-1">
+                        <div class="receipe-ratings text-left">
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis nulla quae tempore asperiores magnam praesentium, nam tempora beatae. Facere officiis laudantium ipsum repudiandae, corrupti consequatur debitis ex perspiciatis dolore soluta.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <span style="font-weight: bold; text-align: left;">September 12, 2021</span>
+                    </div>
+                    <div class="col-2 offset-8">
+                        <span style="font-weight: bold; text-align: right;">by John Doe</span>
+                    </div>
+                </div>

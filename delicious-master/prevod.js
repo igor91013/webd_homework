@@ -33,7 +33,7 @@ function loadLanguage() {
    
 
     document.getElementsByTagName('head')[0].appendChild(scr);
-    setTimeout(textInput, 30);
+    setTimeout(textInput, 100);
 }
 
 

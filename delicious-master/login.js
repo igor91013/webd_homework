@@ -1,5 +1,3 @@
-
-
 function logIn() {
     korisnici = JSON.parse(localStorage.getItem("korisnici"))
     let username = document.getElementById('usernamelog').value;

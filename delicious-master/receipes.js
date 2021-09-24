@@ -2,6 +2,7 @@ var recipes =
 [
     {
         type : "appetizer",
+        data : "przenice.js",
         thumbnail : "images/przenice.jpg",
         title : "Prženice",
         author : "MojRecept.rs",
@@ -12,6 +13,7 @@ var recipes =
 
     {
         type : "appetizer",
+        data : "kacamak.js",
         thumbnail : "images/kacamak.jpg",
         title : "Kačamak",
         author : "MojRecept.rs",
@@ -182,7 +184,8 @@ function loadRecipes(rcp)
             let div3 = document.createElement("div");
             div3.className = "blog-content";
             let a1 = document.createElement("a")
-            a1.href = "#";
+            a1.href = "receipe-post.html";
+            a1.setAttribute("onclick", "localStorage.setItem('recipe-data', '" + recipe.data + "')");
             a1.className = "post-title";
             a1.innerHTML = recipe.title;
             let div4 = document.createElement("div");
