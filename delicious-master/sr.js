@@ -18,5 +18,8 @@ var data = {
     best3: "Najbolja 3 recepta",
     ourpartners: "Naši saradnici:",
     usernamepro: "Korisničko ime:",
+    whoare: "Ko smo mi i čime se bavimo?",
+    ourgoal: "Mi smo vaš kulinarski online kutak i jedini cilj nam je da Vam pomognemo u pripremenju ukusne hrane"
+   
     
 }

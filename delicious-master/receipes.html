@@ -23,7 +23,7 @@
     <script src="login.js"></script>
     <script src="register.js"></script>
     <script src="skripta.js"></script>
-   
+
 
 </head>
 
@@ -84,16 +84,16 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li class="active"><a data-lang="home" href="index.html">Home</a></li>
-                                    <li><a data-lang="receipes" href="receipes.html">Receipes</a>
+                                    <li><a data-lang="home" href="index.html">Home</a></li>
+                                    <li class="active"><a data-lang="receipes" href="receipes.html">Receipes</a>
                                         <ul class="dropdown" id="padajuca">
                                             <li><a data-lang="appetizer" href="#"
-                                                    onclick="changeGroup('appetizer')">Appetizer</a></li>
+                                                    onclick="changeGroup('appetizer');setBreadcrumb('appetizer')">Appetizer</a></li>
                                             <li><a data-lang="maincourse" href="#"
-                                                    onclick="changeGroup('maincourse')">Main course</a></li>
+                                                    onclick="changeGroup('maincourse');setBreadcrumb('maincourse')">Main course</a></li>
                                             <li><a data-lang="dessert" href="#"
-                                                    onclick="changeGroup('dessert')">Dessert</a></li>
-                                            <li><a data-lang="snack" href="#" onclick="changeGroup('snack')">Snack</a>
+                                                    onclick="changeGroup('dessert');setBreadcrumb('dessert')">Dessert</a></li>
+                                            <li><a data-lang="snack" href="#" onclick="changeGroup('snack');setBreadcrumb('snack')">Snack</a>
                                             </li>
 
 
@@ -101,7 +101,7 @@
                                     </li>
 
                                     <li><a data-lang="addrecipe" href="#">Add receipe</a></li>
-                                    <li><a data-lang="myprofile" href="#">My profile</a>
+                                    <li><a data-lang="myprofile" href="#" onclick="myProfile()">My profile</a>
                                         <ul id="logsnav" class="dropdown">
                                             <li id="loginbut"><a data-lang="login" href="login.html">Log in</a>
 
@@ -110,7 +110,7 @@
                                                     out</a>
                                         </ul>
                                     </li>
-                                    <li><a data-lang="aboutus" href="#">About us</a></li>
+                                    <li><a data-lang="aboutus" href="about.html">About us</a></li>
 
                                     <li><a data-lang="language" href="#">Language</a>
                                         <ul class="dropdown">
@@ -126,62 +126,71 @@
                                 <!-- Newsletter Form -->
                                 <div class="search-btn">
                                     <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
+                                </div>                         
 
                             </div>
                             <!-- Nav End -->
                         </div>
+
                     </nav>
                 </div>
             </div>
         </div>
 
-        <ul class="breadcrumbs">
-            <li class="breadcrumbs__item">
-                <a data-lang="home" href="index.html" class="breadcrumbs__link">Home</a>
-            </li>
-            <li class="breadcrumbs__item">
-                <a data-lang="receipes" href="" class="breadcrumbs__link breadcrumbs__link--active">Recipes</a>
-            </li>
-            
-        </ul>
+
     </header>
 
 
-    <!-- ##### Header Area End ##### -->
+    <section class="hero-area">
+        <div id="breadcrumbsplace">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a data-lang="home" href="index.html" class="breadcrumbs__link">Home</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a data-lang="receipes" href="" class="breadcrumbs__link breadcrumbs__link--active">Recipes</a>
+                </li>
 
-    <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb2.jpg);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <div class="breadcumb-text text-center">
-                        <h2>Blog</h2>
+            </ul>
+        </div>
+        <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb2.jpg);">
+
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <div class="breadcumb-text text-center">
+                            <h2>Blog</h2>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+
     <!-- ##### Breadcumb Area End ##### -->
 
     <!-- Widget -->
 
     <!-- ##### Blog Area Start ##### -->
     <div class="blog-area ">
+
         <div class="container">
             <div class="row align-items-center padding-filter">
                 <div class="col-2">
-                    <a data-lang="sortrat" href="#" class="btn delicious-btn btn-4 m-1" id="rat" name="asc" onclick="sortiraj('rat')">Sort by rating</a>
+                    <a data-lang="sortrat" href="#" class="btn delicious-btn btn-4 m-1" id="rat" name="asc"
+                        onclick="sortiraj('rat')">Sort by rating</a>
                 </div>
                 <div class="col-2">
-                    <a data-lang="sortdif" href="#" class="btn delicious-btn btn-4 m-1" id="diff" name="asc" onclick="sortiraj('diff')">Sort by difficulty</a>
+                    <a data-lang="sortdif" href="#" class="btn delicious-btn btn-4 m-1" id="diff" name="asc"
+                        onclick="sortiraj('diff')">Sort by difficulty</a>
                 </div>
                 <div class="col-2 offset-4">
-                    <input class="form-control border border-success" id="search" type="text"
-                        placeholder="...">
+                    <input class="form-control border border-success" id="search" type="text" placeholder="...">
                 </div>
                 <div class="col-2">
-                    <button data-lang="search" class="btn delicious-btn btn-4 m-1" onclick="searchRecipes()">Search</button>
+                    <button data-lang="search" class="btn delicious-btn btn-4 m-1"
+                        onclick="searchRecipes()">Search</button>
                 </div>
             </div>
 

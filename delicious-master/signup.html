@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="nasstil.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -51,17 +51,17 @@
 
         <!-- Navbar Area -->
         <div class="delicious-main-menu">
-            
+
             <div class="classy-nav-container breakpoint-off">
-                
+
                 <div class="container">
-                    
+
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="deliciousNav">
-                        <a class="nav-brand" href="index.html"><img  src="img/core-img/logo.png" alt=""></a>
+                        <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
 
                         <!-- Logo -->
-                        
+
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -80,32 +80,34 @@
                             <div class="classynav">
                                 <ul>
                                     <li class="active"><a data-lang="home" href="index.html">Home</a></li>
-                                    <li ><a data-lang="receipes" href="receipes.html">Receipes</a>
+                                    <li><a data-lang="receipes" href="receipes.html">Receipes</a>
                                         <ul class="dropdown" id="padajuca">
                                             <li><a data-lang="appetizer" href="#">Appetizer</a></li>
                                             <li><a href="about.html">Main course</a></li>
                                             <li><a href="blog-post.html">Dessert</a></li>
                                             <li><a href="receipe-post.html">Snack</a></li>
-                                           
-                                            
+
+
                                         </ul>
                                     </li>
-                                    
+
                                     <li><a href="receipe-post.html">Add receipe</a></li>
-                                    <li><a href="receipe-post.html">My profile</a>
+                                    <li><a href="#">My profile</a>
                                         <ul class="dropdown">
-                                    <li><a href="login.html">Log in</a>
-                                        
-                                        <li><a href="#">Sign up</a>
+                                            <li><a href="login.html">Log in</a>
+
+                                            <li><a href="#">Sign up</a>
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">About us</a></li>
-                                    
+
                                     <li><a href="#">Language</a>
                                         <ul class="dropdown">
-                                            <li ><a href="#" onclick="setLanguage('sr')"><span class="flag-icon flag-icon-rs"></span>&nbsp;Serbian</a></li>
-                                            <li><a href="#" onclick="setLanguage('en')"><span class="flag-icon flag-icon-gb"></span>&nbsp;English</a></li>
-                       
+                                            <li><a href="#" onclick="setLanguage('sr')"><span
+                                                        class="flag-icon flag-icon-rs"></span>&nbsp;Serbian</a></li>
+                                            <li><a href="#" onclick="setLanguage('en')"><span
+                                                        class="flag-icon flag-icon-gb"></span>&nbsp;English</a></li>
+
                                         </ul>
                                     </li>
                                 </ul>
@@ -124,63 +126,59 @@
         </div>
     </header>
 
-    <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb2.jpg);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    
+    <section class="hero-area">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+                <a data-lang="home" href="index.html" class="breadcrumbs__link">Home</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a data-lang="signup" href="" class="breadcrumbs__link breadcrumbs__link--active">Sign up</a>
+            </li>
+
+        </ul>
+        <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb2.jpg);">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- ##### Breadcumb Area End ##### -->
+    </section>
 
- <!-- Widget -->
- 
+    <!-- Widget -->
+
     <!-- ##### Blog Area Start ##### -->
-    
+
 
     <section id="hero" class="kontrola-forme">
         <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="col-12 mt-5 mt-lg-0  align-items-stretch">
-              <form id="loginforma"  >
-                <div class="mx-auto w-40">
-                    
-                  <div class="form-group">
-                    <label for="username">Username</label>
-                    <input
-                      type="username"
-                      name="username"
-                      class="form-control"
-                      id="usernamereg"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      name="password"
-                      id="passwordreg"
-                      required
-                    />
-                    
-                  </div>
+            <div class="row">
+                <div class="col-12 mt-5 mt-lg-0  align-items-stretch">
+                    <form id="loginforma">
+                        <div class="mx-auto w-40">
+
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="username" name="username" class="form-control" id="usernamereg" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" id="passwordreg" required />
+
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <a onclick=register() href="#" class="btn delicious-btn m-1">Register</a>
+                        </div>
+                    </form>
                 </div>
-  
-                <div class="text-center">
-                    <a onclick=register() href="#" class="btn delicious-btn m-1">Register</a>
-                </div>
-              </form>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
 
 
@@ -201,9 +199,10 @@
                     </div>
                     <!-- Copywrite -->
                     <p class="text-right">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>, 
-                        Димитрије Поповић, Игор Дукић, 
-                        <br> 
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>,
+                        Димитрије Поповић, Игор Дукић,
+                        <br>
                         Одсек за софтверско инжењерство Електротехничког факултета Универзитета у Београду
                     </p>
                 </div>
