@@ -176,21 +176,43 @@
     <div class="blog-area ">
 
         <div class="container">
-            <div class="row align-items-center padding-filter">
-                <div class="col-2">
-                    <a data-lang="sortrat" href="#" class="btn delicious-btn btn-4 m-1" id="rat" name="asc"
-                        onclick="sortiraj('rat')">Sort by rating</a>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between py-4">
+
+                <div class="d-flex flex-column flex-md-row mr-md-30">
+                    <a
+                     data-lang="sortrat"
+                     href="#" 
+                     class="btn delicious-btn btn-4 m-1"
+                     id="rat" 
+                     name="asc"
+                     onclick="sortiraj('rat')">
+                        Sort by rating
+                    </a>
+
+                    <a 
+                    data-lang="sortdif" 
+                    href="#" 
+                    class="btn delicious-btn btn-4 m-1" 
+                    id="diff"
+                    name="asc"
+                    onclick="sortiraj('diff')"
+                    >
+                        Sort by difficulty
+                    </a>
                 </div>
-                <div class="col-2">
-                    <a data-lang="sortdif" href="#" class="btn delicious-btn btn-4 m-1" id="diff" name="asc"
-                        onclick="sortiraj('diff')">Sort by difficulty</a>
-                </div>
-                <div class="col-2 offset-4">
-                    <input class="form-control border border-success" id="search" type="text" placeholder="...">
-                </div>
-                <div class="col-2">
-                    <button data-lang="search" class="btn delicious-btn btn-4 m-1"
-                        onclick="searchRecipes()">Search</button>
+
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <input class="form-control border border-success" id="search" type="text" placeholder="...">
+                    </div>
+                    
+                    <button 
+                        data-lang="search" 
+                        class="btn delicious-btn btn-4 m-1"
+                        onclick="searchRecipes()">
+                        Search
+                    </button>
                 </div>
             </div>
 

@@ -112,7 +112,15 @@ img {
   margin-right: 15px !important; }
 
 .mr-30 {
-  margin-right: 30px !important; }
+  margin-right: 30px !important; 
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  .mr-md-30 {
+    margin-right: 30px !important;
+  }
+}
+
 
 .mr-50 {
   margin-right: 50px !important; }
@@ -868,8 +876,6 @@ textarea:focus {
     position: relative;
     z-index: 1; }
     .single-blog-area .blog-thumbnail .post-date {
-      width: 75px;
-      height: 100px;
       background-color: #40ba37;
       position: absolute;
       top: 20px;

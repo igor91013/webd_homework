@@ -224,11 +224,10 @@ function loadRecipes(rcp) {
             img1.src = recipe.thumbnail;
 
             let div2_1 = document.createElement("div");
-            div2_1.className = "post-date w-25 border border-white";
+            div2_1.className = "post-date border border-white p-2";
             let div2_1_1 = document.createElement("div");
-            div2_1_1.className = "receipe-ratings text-center my-5";
+            div2_1_1.className = "receipe-ratings text-center";
             let div2_1_1_1 = document.createElement("div");
-            div2_1_1_1.className = "ratings";
 
             for (let i = 1; i <= 5; ++i) {
                 let star = document.createElement("i");
