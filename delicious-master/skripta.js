@@ -23,11 +23,11 @@ function turnonLS() {
 
 function initHomePage() {
   getLanguage();
-  let korisnici=[]
-  let korisnik={username:"_",password:"_"};
+  let korisnici = []
+  let korisnik = { username: "_", password: "_" };
   korisnici.push(korisnik);
-  if(localStorage.getItem("korisnici")==null){
-    localStorage.setItem("korisnici",JSON.stringify(korisnici));
+  if (localStorage.getItem("korisnici") == null) {
+    localStorage.setItem("korisnici", JSON.stringify(korisnici));
   }
   korisnici = JSON.parse(localStorage.getItem("korisnici"));
   if (!sessionStorage.getItem("ulogovan"))
@@ -35,6 +35,7 @@ function initHomePage() {
 
   if (sessionStorage.getItem("ulogovan"))
     turnoffLS();
+   
 
 }
 
@@ -50,6 +51,25 @@ function initReceipesPage() {
 
 
 }
+
+function initAboutPage(){
+  getLanguage();
+  if (!sessionStorage.getItem("ulogovan"))
+    document.getElementById("logoutbut").style.display = 'none';
+
+  if (sessionStorage.getItem("ulogovan"))
+    turnoffLS();
+}
+
+function initLoginPage(){
+  initAboutPage();
+}
+
+function initSignupPage(){
+  initAboutPage();
+}
+
+
 
 function myProfile() {
 
@@ -68,10 +88,11 @@ function initMyprofile() {
   let ulogovan = sessionStorage.getItem("ulogovan");
   if (!ulogovan) {
     window.location.href = "login.html";
-    return
+    
   }
   document.getElementById("profileusername").innerText = JSON.parse(ulogovan).username;
   getLanguage();
 
-  turnoffLS();
+  if (ulogovan)
+    turnoffLS();
 }

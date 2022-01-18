@@ -3,7 +3,7 @@ var data = {
     receipes :"Receipes",
     appetizer: "Appetizer",
     maincourse: "Main course",
-    desert: "Dessert",
+    dessert: "Dessert",
     snack: "Snack",
     addrecipe: "Add receipe",
     yprofile: "My profile",
@@ -18,5 +18,10 @@ var data = {
     best3: "The best 3 receipies",
     ourpartners: "Our partners:",
     usernamepro: "Username:",
+    whoare: "Who we are and what we do?",
+    ourgoal: "Our goal is to help u make some cool food",
+    username: "Username",
+    password: "Password",
+    loginbut: "Log In",
 }
  
