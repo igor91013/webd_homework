@@ -1,6 +1,6 @@
 
 
-let korisnici =
+korisnici =
     [
         {
             username: "_",

@@ -23,8 +23,8 @@ function turnonLS() {
 
 function initHomePage() {
   getLanguage();
-  let korisnici = []
-  let korisnik = { username: "_", password: "_" };
+  
+  korisnik = { username: "_", password: "_" };
   korisnici.push(korisnik);
   if (localStorage.getItem("korisnici") == null) {
     localStorage.setItem("korisnici", JSON.stringify(korisnici));
