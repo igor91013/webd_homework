@@ -178,34 +178,40 @@ function setBreadcrumb(page) {
     ul.appendChild(li2);
     ul.appendChild(li3);
     bc=document.getElementById("breadcrumbsplace");
+    
     while (bc.firstChild) {
         bc.removeChild(bc.firstChild);
     }
-    if(page=='appetizer')
-    a3.appendChild(document.createTextNode("Appetizer"));
-    a3.setAttribute("data-lang","appetizer")
-    if(page=='maincourse')
-    a3.appendChild(document.createTextNode("Main course"));
-    a3.setAttribute("data-lang","maincourse")
-    if(page=='dessert')
-    a3.appendChild(document.createTextNode("Dessert"));
-    a3.setAttribute("data-lang","dessert")
-    if(page=='snack')
-    a3.appendChild(document.createTextNode("Snack"));
-    a3.setAttribute("data-lang","snack")
+
+
+    if(page=='appetizer') {
+        a3.appendChild(document.createTextNode("Appetizer"));
+        a3.setAttribute("data-lang","appetizer")
+    }
+        
+    if(page=='maincourse') {
+        a3.appendChild(document.createTextNode("Main course"));
+        a3.setAttribute("data-lang","maincourse")
+    }
+       
+    if(page=='dessert') {
+        a3.appendChild(document.createTextNode("Dessert"));
+        a3.setAttribute("data-lang","dessert")
+    }
+        
+    if(page=='snack') {
+        a3.appendChild(document.createTextNode("Snack"));
+        a3.setAttribute("data-lang","snack")
+    }
+    
     li3.appendChild(a3);
+    
     bc.appendChild(ul);
 
+    for (const property in data) {
+        $("body").find(`[data-lang="${property}"]`).text(data[property])
+    }
 
-   /* <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-            <a data-lang="home" href="index.html" class="breadcrumbs__link">Home</a>
-        </li>
-        <li class="breadcrumbs__item">
-            <a data-lang="receipes" href="receipes.html" class="breadcrumbs__link breadcrumbs__link--active">Receipes</a>
-        </li>
-
-    </ul>*/
 }
 
 function loadRecipes(rcp) {
