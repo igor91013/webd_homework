@@ -45,14 +45,12 @@ function initReceipesPage() {
     document.getElementById("logoutbut").style.display = 'none';
   }
 
-
-
   if (sessionStorage.getItem("ulogovan"))
   {
     turnoffLS();
   }
 
-    loadAllRecipes(JSON.parse(localStorage.getItem("recipes")));
+    loadRecipes(JSON.parse(localStorage.getItem("recipes")));
 
 
 }

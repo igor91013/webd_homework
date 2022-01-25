@@ -308,7 +308,7 @@ function loadRecipes(rcp) {
     let recipes = rcp;
 
     recipes.forEach(recipe => {
-        if (recipe.type == group) {
+        if ((group == null) || (recipe.type == group)) {
             let div1 = document.createElement("div");
             div1.className = "single-blog-area mb-80";
             let div2 = document.createElement("div");
