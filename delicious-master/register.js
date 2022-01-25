@@ -30,7 +30,7 @@ function register() {
 
     let korisnik = { username: username, password: encrpas(password) }
     korisnici.push(korisnik)
-    console.log(korisnici)
+    
     //sessionStorage.setItem(username, encrpas(password));
 
     localStorage.setItem("korisnici", JSON.stringify(korisnici));

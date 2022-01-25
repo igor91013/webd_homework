@@ -41,13 +41,18 @@ function initHomePage() {
 
 function initReceipesPage() {
   getLanguage();
-  if (!sessionStorage.getItem("ulogovan"))
+  if (!sessionStorage.getItem("ulogovan")){
     document.getElementById("logoutbut").style.display = 'none';
+  }
 
 
 
   if (sessionStorage.getItem("ulogovan"))
+  {
     turnoffLS();
+  }
+
+    loadAllRecipes(JSON.parse(localStorage.getItem("recipes")));
 
 
 }
