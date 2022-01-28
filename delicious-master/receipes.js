@@ -8,10 +8,13 @@ var recipes =
             author: "MojRecept.rs",
             text: "Prženice",
             rating: "2",
-            difficulty: "1"
+            difficulty: "1",
+            
+            
         },
 
         {
+            
             type: "appetizer",
             data: "kacamak.js",
             thumbnail: "images/kacamak.jpg",
@@ -215,91 +218,6 @@ function setBreadcrumb(page) {
     }
 
 }
-
-function loadAllRecipes(rcp) {
-    removeRecipes();
-
-    loadedRecipes = [];
-    let recipes = rcp;
-
-    recipes.forEach(recipe => {
-        
-            let div1 = document.createElement("div");
-            div1.className = "single-blog-area mb-80";
-            let div2 = document.createElement("div");
-            div2.className = "blog-thumbnail";
-            let img1 = document.createElement("img");
-            img1.src = recipe.thumbnail;
-
-            let div2_1 = document.createElement("div");
-            div2_1.className = "post-date border border-white p-2";
-            let div2_1_1 = document.createElement("div");
-            div2_1_1.className = "receipe-ratings text-center";
-            let div2_1_1_1 = document.createElement("div");
-
-            for (let i = 1; i <= 5; ++i) {
-                let star = document.createElement("i");
-                if (i <= parseInt(recipe.rating))
-                    star.className = "fa fa-star";
-                else
-                    star.className = "fa fa-star-o";
-                star.setAttribute("aria-hidden", "true");
-                div2_1_1_1.appendChild(star);
-            }
-
-            div2_1_1.appendChild(div2_1_1_1);
-            div2_1.appendChild(div2_1_1);
-
-
-            let div3 = document.createElement("div");
-            div3.className = "blog-content";
-            let a1 = document.createElement("a")
-            a1.href = "receipe-post.html";
-            a1.setAttribute("onclick", "localStorage.setItem('recipe-data', '" + recipe.data + "')");
-            a1.className = "post-title";
-            a1.innerHTML = recipe.title;
-            let div4 = document.createElement("div");
-            div4.className = "meta-data";
-            div4.innerHTML = "by ";
-            let a1_1 = document.createElement("a");
-            a1_1.href = "#";
-            a1_1.innerHTML = recipe.author;
-            let p1 = document.createElement("p");
-            p1.innerHTML = recipe.text;
-            let a2 = document.createElement("a");
-            a2.href = "#";
-            a2.className = "btn delicious-btn m-1";
-            switch (recipe.difficulty) {
-                case "1": a2.innerHTML = "beginner";
-                    break;
-                case "2": a2.innerHTML = "intermediate";
-                    break;
-                case "3": a2.innerHTML = "advanced";
-                    break;
-                default: a2.innerHTML = "unknown";
-            }
-
-            div4.appendChild(a1_1);
-
-            div3.appendChild(a1);
-            div3.appendChild(div4);
-            div3.appendChild(p1);
-            div3.appendChild(a2);
-
-            div2.appendChild(div2_1);
-            div2.appendChild(img1);
-
-            div1.appendChild(div2);
-            div1.appendChild(div3);
-
-            document.getElementById("recipes").appendChild(div1);
-
-            loadedRecipes.push(recipe);
-        
-    });
-}
-
-
 
 function loadRecipes(rcp) {
     removeRecipes();

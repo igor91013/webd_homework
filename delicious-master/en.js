@@ -23,5 +23,6 @@ var data = {
     username: "Username",
     password: "Password",
     loginbut: "Log In",
+    callus: "Our phone number: (+381) 60 12345 6789",
 }
  

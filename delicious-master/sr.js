@@ -23,6 +23,7 @@ var data = {
     username: "Korisničko ime",
     password: "Lozinka",
     loginbut: "Prijavi se",
+    callus: "Naš broj telefona: (+381) 60 12345 6789",
    
     
 }
