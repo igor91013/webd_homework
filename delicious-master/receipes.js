@@ -1,3 +1,4 @@
+
 var recipes =
     [
         //prevodi?
@@ -5,118 +6,121 @@ var recipes =
             type: "appetizer",
             thumbnail: "images/przenice.jpg",
             title: "Prženice",
-            date : "August 31, 2021",
-            author: "MojRecept.rs",
+            date: "August 31, 2021",
+            author: "test",
             text: "Prženice",
             rating: "2",
             difficulty: "1",
-            
-            
-            video : "",
-            cooking : "17 mins",
-            yields : "4 servings",
-            
-            preparation : 
-            [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-            ],
-            ingredients :
-            [
-                "4 Tbsp (57 gr) butter",
-                "2 large eggs",
-                "2 yogurt containers granulated sugar",
-                "1 vanilla or plain yogurt, 170g container",
-                "2 yogurt containers unbleached white flour",
-                "1.5 yogurt containers milk",
-                "1/4 tsp cinnamon",
-                "1 cup fresh blueberries"
-            ],
-            pictures :
-            [
-                "przenice1.jpg",
-                "przenice2.jpg",
-                "przenice3.jpg"
-            ],
-            reviews :
-            [
-                {
-                    user : "a",
-                    date : "b",
-                    rating : "3",
-                    title : "c",
-                    text : "d",
-                }
-            ]
+            id: 1,
+
+
+            video: "",
+            cooking: "17 mins",
+            yields: "4 servings",
+
+            preparation:
+                [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                ],
+            ingredients:
+                [
+                    "4 Tbsp (57 gr) butter",
+                    "2 large eggs",
+                    "2 yogurt containers granulated sugar",
+                    "1 vanilla or plain yogurt, 170g container",
+                    "2 yogurt containers unbleached white flour",
+                    "1.5 yogurt containers milk",
+                    "1/4 tsp cinnamon",
+                    "1 cup fresh blueberries"
+                ],
+            pictures:
+                [
+                    "przenice1.jpg",
+                    "przenice2.jpg",
+                    "przenice3.jpg"
+                ],
+            reviews:
+                [
+                    {
+                        user: "a",
+                        date: "b",
+                        rating: "3",
+                        title: "c",
+                        text: "d",
+                    }
+                ]
         },
 
         {
-            
+
             type: "appetizer",
             data: "kacamak.js",
             thumbnail: "images/kacamak.jpg",
             title: "Kačamak",
-            date : "August 31, 2021",
+            date: "August 31, 2021",
             author: "MojRecept.rs",
             text: "Kačamak",
             rating: "5",
             difficulty: "3",
-            video : "",
-            cooking : "17 mins",
-            yields : "4 servings",
-            
-            preparation : 
-            [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-            ],
-            ingredients :
-            [
-                "4 Tbsp (57 gr) butter",
-                "2 large eggs",
-                "2 yogurt containers granulated sugar",
-                "1 vanilla or plain yogurt, 170g container",
-                "2 yogurt containers unbleached white flour",
-                "1.5 yogurt containers milk",
-                "1/4 tsp cinnamon",
-                "1 cup fresh blueberries"
-            ],
-            pictures :
-            [
-                "przenice1.jpg",
-                "przenice2.jpg",
-                "przenice3.jpg"
-            ],
-            reviews :
-            [
-                {
-                    user : "a",
-                    date : "b",
-                    rating : "3",
-                    title : "c",
-                    text : "d",
-                },
-                
-                {
-                    user : "a",
-                    date : "b",
-                    rating : "3",
-                    title : "c",
-                    text : "d",
-                }
-            ]
+            id: 2,
+            video: "",
+            cooking: "17 mins",
+            yields: "4 servings",
+
+            preparation:
+                [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                ],
+            ingredients:
+                [
+                    "4 Tbsp (57 gr) butter",
+                    "2 large eggs",
+                    "2 yogurt containers granulated sugar",
+                    "1 vanilla or plain yogurt, 170g container",
+                    "2 yogurt containers unbleached white flour",
+                    "1.5 yogurt containers milk",
+                    "1/4 tsp cinnamon",
+                    "1 cup fresh blueberries"
+                ],
+            pictures:
+                [
+                    "przenice1.jpg",
+                    "przenice2.jpg",
+                    "przenice3.jpg"
+                ],
+            reviews:
+                [
+                    {
+                        user: "a",
+                        date: "b",
+                        rating: "3",
+                        title: "c",
+                        text: "d",
+                    },
+
+                    {
+                        user: "a",
+                        date: "b",
+                        rating: "3",
+                        title: "c",
+                        text: "d",
+                    }
+                ]
         },
 
         {
             type: "appetizer",
             thumbnail: "images/proja.jpg",
             title: "Proja",
-            author: "MojRecept.rs",
+            author: "test",
             text: "Proja",
-            rating: "4",
-            difficulty: "2"
+
+            difficulty: "2",
+            id: 3,
         },
 
         {
@@ -126,7 +130,8 @@ var recipes =
             author: "MojRecept.rs",
             text: "Suši",
             rating: "5",
-            difficulty: "3"
+            difficulty: "3",
+            id: 4,
         },
 
         {
@@ -136,7 +141,8 @@ var recipes =
             author: "MojRecept.rs",
             text: "Gulaš",
             rating: "3",
-            difficulty: "1"
+            difficulty: "1",
+            id: 5,
         },
 
         {
@@ -146,7 +152,8 @@ var recipes =
             author: "MojRecept.rs",
             text: "Musaka",
             rating: "4",
-            difficulty: "2"
+            difficulty: "2",
+            id: 6,
         },
 
         {
@@ -156,7 +163,8 @@ var recipes =
             author: "MojRecept.rs",
             text: "Tulumba",
             rating: "3",
-            difficulty: "2"
+            difficulty: "2",
+            id: 7,
         },
 
         {
@@ -166,7 +174,8 @@ var recipes =
             author: "MojRecept.rs",
             text: "Baklava",
             rating: "1",
-            difficulty: "1"
+            difficulty: "1",
+            id: 8,
         },
 
         {
@@ -176,7 +185,8 @@ var recipes =
             author: "MojRecept.rs",
             text: "Banana Split",
             rating: "5",
-            difficulty: "3"
+            difficulty: "3",
+            id: 9,
         },
 
         {
@@ -186,7 +196,8 @@ var recipes =
             author: "MojRecept.rs",
             text: "Club Sandwich",
             rating: "5",
-            difficulty: "2"
+            difficulty: "2",
+            id: 10,
         },
 
         {
@@ -196,7 +207,8 @@ var recipes =
             author: "MojRecept.rs",
             text: "Cezar salata",
             rating: "2",
-            difficulty: "3"
+            difficulty: "3",
+            id: 11,
         },
 
         {
@@ -206,14 +218,17 @@ var recipes =
             author: "MojRecept.rs",
             text: "Voćna salata",
             rating: "1",
-            difficulty: "1"
+            difficulty: "1",
+            id: 12,
         }
     ]
 
 var group = null;
 var loadedRecipes = [];
+if (localStorage.getItem("recipes") == null)
+    localStorage.setItem("recipes", JSON.stringify(recipes));
 
-localStorage.setItem("recipes", JSON.stringify(recipes));
+
 
 function removeRecipes() {
     const divrec = document.getElementById("recipes");
@@ -223,7 +238,7 @@ function removeRecipes() {
 }
 
 function changeGroup(grp) {
-    
+
     group = grp;
     if (grp == 'appetizer') {
 
@@ -236,65 +251,65 @@ function changeGroup(grp) {
 function setBreadcrumb(page) {
     let ul = document.createElement("ul");
     ul.className = "breadcrumbs";
-    let li1 = document.createElement("li"); 
-    li1.className="breadcrumbs__item";
-    let li2 = document.createElement("li"); 
-    li2.className="breadcrumbs__item";
-    let li3 = document.createElement("li"); 
-    li3.className="breadcrumbs__item";
-    a1=document.createElement("a");
-    a2=document.createElement("a");
-    a3=document.createElement("a");
+    let li1 = document.createElement("li");
+    li1.className = "breadcrumbs__item";
+    let li2 = document.createElement("li");
+    li2.className = "breadcrumbs__item";
+    let li3 = document.createElement("li");
+    li3.className = "breadcrumbs__item";
+    a1 = document.createElement("a");
+    a2 = document.createElement("a");
+    a3 = document.createElement("a");
 
-    a1.setAttribute("href","index.html");
-    a2.setAttribute("href","#");
-    a3.setAttribute("href","#");
-    a1.setAttribute("data-lang","home");
-    a2.setAttribute("data-lang","receipes");
+    a1.setAttribute("href", "index.html");
+    a2.setAttribute("href", "#");
+    a3.setAttribute("href", "#");
+    a1.setAttribute("data-lang", "home");
+    a2.setAttribute("data-lang", "receipes");
 
-    a1.className="breadcrumbs__link";
-    a2.className="breadcrumbs__link";
-    a3.className="breadcrumbs__link--active";
-    
+    a1.className = "breadcrumbs__link";
+    a2.className = "breadcrumbs__link";
+    a3.className = "breadcrumbs__link--active";
+
     a1.appendChild(document.createTextNode("Home"));
     a2.appendChild(document.createTextNode("Receipes"));
-    
-  
+
+
     li1.appendChild(a1);
     li2.appendChild(a2);
-    
+
     ul.appendChild(li1);
     ul.appendChild(li2);
     ul.appendChild(li3);
-    bc=document.getElementById("breadcrumbsplace");
-    
+    bc = document.getElementById("breadcrumbsplace");
+
     while (bc.firstChild) {
         bc.removeChild(bc.firstChild);
     }
 
 
-    if(page=='appetizer') {
+    if (page == 'appetizer') {
         a3.appendChild(document.createTextNode("Appetizer"));
-        a3.setAttribute("data-lang","appetizer")
+        a3.setAttribute("data-lang", "appetizer")
     }
-        
-    if(page=='maincourse') {
+
+    if (page == 'maincourse') {
         a3.appendChild(document.createTextNode("Main course"));
-        a3.setAttribute("data-lang","maincourse")
+        a3.setAttribute("data-lang", "maincourse")
     }
-       
-    if(page=='dessert') {
+
+    if (page == 'dessert') {
         a3.appendChild(document.createTextNode("Dessert"));
-        a3.setAttribute("data-lang","dessert")
+        a3.setAttribute("data-lang", "dessert")
     }
-        
-    if(page=='snack') {
+
+    if (page == 'snack') {
         a3.appendChild(document.createTextNode("Snack"));
-        a3.setAttribute("data-lang","snack")
+        a3.setAttribute("data-lang", "snack")
     }
-    
+
     li3.appendChild(a3);
-    
+
     bc.appendChild(ul);
 
     for (const property in data) {
@@ -308,8 +323,8 @@ function setBreadcrumb(page) {
 
 function loadRecipes(rcp) {
     removeRecipes();
-
     loadedRecipes = [];
+
     let recipes = rcp;
 
     recipes.forEach(recipe => {
@@ -361,10 +376,13 @@ function loadRecipes(rcp) {
             a2.className = "btn delicious-btn m-1";
             switch (recipe.difficulty) {
                 case "1": a2.innerHTML = "beginner";
+                a2.setAttribute("data-lang","beginner")
                     break;
                 case "2": a2.innerHTML = "intermediate";
+                a2.setAttribute("data-lang","intermediate")
                     break;
                 case "3": a2.innerHTML = "advanced";
+                a2.setAttribute("data-lang","advanced")
                     break;
                 default: a2.innerHTML = "unknown";
             }

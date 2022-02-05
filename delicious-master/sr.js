@@ -24,6 +24,16 @@ var data = {
     password: "Lozinka",
     loginbut: "Prijavi se",
     callus: "Naš broj telefona: (+381) 60 12345 6789",
+    beginner: "Početni",
+    intermediate: "Srednji",
+    advanced: "Napredni",
+    recipename: "Naziv recepta",
+    cooktime: "Vreme kuvanja (minuti)",
+    shortdesc: "Kratak opis",
+    ingredients: "Sastojci",
+    instructions: "Instrukcije",
+    myrecipes: "Moji recepti:",
+    delete: "Obriši",
    
     
 }

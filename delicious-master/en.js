@@ -24,5 +24,16 @@ var data = {
     password: "Password",
     loginbut: "Log In",
     callus: "Our phone number: (+381) 60 12345 6789",
+    beginner: "Beginner",
+    intermediate: "Intermediate",
+    advanced: "Advanced",
+    recipename: "Recipe name",
+    cooktime: "Cooking time (mins)",
+    shortdesc: "Short description",
+    ingredients: "Ingredients",
+    instructions: "Instructions",
+    myrecipes: "My recipes:",
+    delete: "Delete",
+
 }
  
