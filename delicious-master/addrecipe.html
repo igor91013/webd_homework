@@ -228,15 +228,15 @@
                     <div class="form-col">
                         <div class="form__item">
                             <label data-lang="recipename" class="recipe__name" for="recipe-name">Recipe Name</label>
-                            <input class="textff" id="rectitle" name="recipe-name" />
+                            <input class="textff form-control" id="rectitle" name="recipe-name" />
                         </div>
                         <div class="form__item">
                             <label data-lang="shortdesc" for="short-desc">Short Description</label>
-                            <textarea id="rectext" name="short-desc" cols="30" rows="5"></textarea>
+                            <textarea class="form-control" id="rectext" name="short-desc" cols="30" rows="5"></textarea>
                         </div>
                         <div class="form__item">
                             <label data-lang="ingredients" for="ing-list">Ingredients</label>
-                            <textarea id="recingr" name="ing-list" cols="30" rows="10"></textarea>
+                            <textarea class="form-control" id="recingr" name="ing-list" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                     <div class="form-col">
@@ -244,30 +244,24 @@
 
                         <div class="form__item">
                             <label data-lang="cooktime">Cooking Time (mins)</label>
-                            <input id="rectime" class="time__input" type="text" />
+                            <input id="rectime" class="time__input form-control" type="text" />
                         </div>
 
 
 
                         <div class="form__item">
                             <label data-lang="instructions" for="direction">Instructions</label>
-                            <textarea id="recinstr" name="direction" rows="17"></textarea>
+                            <textarea class="form-control" id="recinstr" name="direction" rows="17"></textarea>
                         </div>
 
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="text-center pt-3">
                     <a data-lang="addrecipe" onclick=addRecipe() href="#" class="btn delicious-btn m-1">Add recipe</a>
                 </div>
             </form>
         </div>
     </section>
-
-
-
-
-
-
 
     <!-- ##### Blog Area End ##### -->
     <!-- ##### Footer Area Start ##### -->
