@@ -92,20 +92,26 @@ function loadRecipeData(recipeData)
         count++;
     });
 
-    /*//Pictures - Ne radi
-    let pictures = recipeData.pictures;
-    count = 1;
-    pictures.forEach(element => {
-        document.getElementById("picture" + count).src = "images/" + element;
-        count++;
-        if (count == 4)
-            return;
-    });*/
+    //Video
+
+    if (recipeData.video != "")
+    {
+        let video = document.createElement("video");
+        video.width = "320";
+        video.height = "240";
+        video.setAttribute("controls", "");
+            let source = document.createElement("source");
+            source.src = recipeData.video;
+            source.type = "video/mp4";
+        document.getElementById("video").appendChild(video);
+    }
 
     //Reviews
     let reviews = recipeData.reviews;
     count = 0;
+    let numElem = reviews.length;
     reviews.forEach(element => {
+
         let div_1 = document.createElement("div");
         div_1.className = "row";
             let div_1_1 = document.createElement("div");
@@ -133,8 +139,75 @@ function loadRecipeData(recipeData)
         document.getElementById("reviews").appendChild(div_1);
         let div_2 = document.createElement("div");
         div_2.className = "row";
-            // zavrsiti let div_3 = document.createElement("")
+            let div_2_1 = document.createElement("p");
+            div_2_1.className = "col-12";
+            div_2_1.innerHTML = element.text;
+            div_2.appendChild(div_2_1); 
         document.getElementById("reviews").appendChild(div_2);
+        let div_3 = document.createElement("div");
+        div_3.className = "row";
+            let div_3_1 = document.createElement("div");
+            div_3_1.className = "col-2 font-italic";
+                let div_3_1_1 = document.createElement("a");
+                div_3_1_1.href="#";
+                div_3_1_1.innerText = "by " + element.user;
+                div_3_1.appendChild(div_3_1_1)
+            div_3.appendChild(div_3_1);
+            let div_3_2 = document.createElement("div");
+            div_3_2.className = "col-2 offset-8";
+                let div_3_2_1 = document.createElement("p");
+                div_3_2_1.innerHTML = element.date;
+                div_3_2.appendChild(div_3_2_1);
+            div_3.appendChild(div_3_2);
+        document.getElementById("reviews").appendChild(div_3);
         count++;
+        if (count < numElem)
+        {
+            let line = document.createElement("hr");
+            document.getElementById("reviews").appendChild(line);
+        }
     });
+}
+
+function showStars(num)
+{
+    let reviewStars = document.getElementById("reviewStars").childNodes;
+    let count = 0;
+    while (count < reviewStars.length)
+    {
+        if(reviewStars[count].nodeType != Node.TEXT_NODE)
+        {
+            if (num > 0)
+            {
+                reviewStars[count].className = "fa fa-star";
+                num--;
+            }
+        }
+        count++;
+    }
+}
+
+function hideStars()
+{
+    let reviewStars = document.getElementById("reviewStars").childNodes;
+    let count = 0;
+    while (count < 5)
+    {
+        if(reviewStars[count].nodeType != Node.TEXT_NODE)
+        {
+            if (num > 0)
+            {
+                reviewStars[count].className = "fa fa-star-o";
+                num--;
+            }
+        }
+        count++;
+    }
+    alert("a");
+}
+
+function addReview()
+{
+    let title = document.getElementById("title");
+    let message = document.getElementById("message");
 }

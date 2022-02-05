@@ -1,5 +1,4 @@
-
-
+var group = null;
 
 function turnoffLS() {
   var x = document.getElementById("loginbut");
@@ -50,9 +49,10 @@ function initReceipesPage() {
     turnoffLS();
   }
 
-    loadRecipes(JSON.parse(localStorage.getItem("recipes")));
-
-
+  if (localStorage.getItem("recipes") == null)
+    localStorage.setItem("recipes", JSON.stringify(recipes));
+ 
+  loadRecipes(JSON.parse(localStorage.getItem("recipes")));
 }
 
 function initAboutPage(){

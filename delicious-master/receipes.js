@@ -12,7 +12,7 @@ var recipes =
             difficulty: "1",
             
             
-            video : "",
+            video : "#",
             cooking : "17 mins",
             yields : "4 servings",
             
@@ -42,12 +42,26 @@ var recipes =
             reviews :
             [
                 {
-                    user : "a",
-                    date : "b",
+                    user : "marko",
+                    date : "24.5.2021",
                     rating : "3",
-                    title : "c",
-                    text : "d",
-                }
+                    title : "Review",
+                    text : "Review text",
+                },
+                {
+                    user : "milos",
+                    date : "4.3.2022",
+                    rating : "5",
+                    title : "Review",
+                    text : "Review text",
+                },
+                {
+                    user : "jovan",
+                    date : "21.3.2020",
+                    rating : "1",
+                    title : "Review",
+                    text : "Review text",
+                },
             ]
         },
 
@@ -213,25 +227,12 @@ var recipes =
 var group = null;
 var loadedRecipes = [];
 
-localStorage.setItem("recipes", JSON.stringify(recipes));
-
 function removeRecipes() {
     const divrec = document.getElementById("recipes");
     while (divrec.lastElementChild) {
         divrec.removeChild(divrec.lastElementChild);
     }
 }
-
-function changeGroup(grp) {
-    
-    group = grp;
-    if (grp == 'appetizer') {
-
-    }
-    loadRecipes(JSON.parse(localStorage.getItem("recipes")));
-}
-
-
 
 function setBreadcrumb(page) {
     let ul = document.createElement("ul");
@@ -303,10 +304,8 @@ function setBreadcrumb(page) {
 
 }
 
-
-
-
 function loadRecipes(rcp) {
+    group = localStorage.getItem("group");
     removeRecipes();
 
     loadedRecipes = [];
