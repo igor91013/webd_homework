@@ -1,6 +1,6 @@
 
 
-var korisnici =
+korisnici =
     [
         {
             username: "_",
@@ -8,10 +8,6 @@ var korisnici =
 
         },
     ]
-
-if (localStorage.getItem("korisnici") == null)
-    localStorage.setItem("korisnici", JSON.stringify(korisnici));
-
 
 function encrpas(pass) {
     return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(pass))
@@ -24,8 +20,8 @@ function decr(encrpass) {
 
 function register() {
     let username = document.getElementById('usernamereg').value
-    let korisnicii=JSON.parse(localStorage.getItem("korisnici"));
-    korisnicii.forEach(korisnik => {
+
+    korisnici.forEach(korisnik => {
         if (korisnik.username == username)
             return alert("Korisnik vec postoji");
     })
@@ -33,9 +29,8 @@ function register() {
     let password = document.getElementById('passwordreg').value
 
     let korisnik = { username: username, password: encrpas(password) }
-    
     korisnici.push(korisnik)
-
+    
     //sessionStorage.setItem(username, encrpas(password));
 
     localStorage.setItem("korisnici", JSON.stringify(korisnici));
