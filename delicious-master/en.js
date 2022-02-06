@@ -15,7 +15,7 @@ var data = {
     sortrat: "Sort by rating",
     sortdif: "Sort by difficulty",
     search: "Search",
-    best3: "The best 3 receipies",
+    best3: "The best 3 recipes",
     ourpartners: "Our partners:",
     usernamepro: "Username:",
     whoare: "Who we are and what we do?",

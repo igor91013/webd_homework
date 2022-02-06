@@ -83,16 +83,16 @@
                                 <!-- Nav Start -->
                                 <div class="classynav">
                                     <ul>
-                                        <li class="active"><a data-lang="home" href="index.html">Home</a></li>
-                                        <li><a data-lang="receipes" href="receipes.html">Receipes</a>
+                                        <li><a data-lang="home" href="index.html">Home</a></li>
+                                        <li class="active"><a data-lang="receipes" href="receipes.html" onclick="localStorage.removeItem('group')">Receipes</a>
                                             <ul class="dropdown" id="padajuca">
-                                                <li><a data-lang="appetizer" href="#"
-                                                        onclick="changeGroup('appetizer')">Appetizer</a></li>
-                                                <li><a data-lang="maincourse" href="#"
-                                                        onclick="changeGroup('maincourse')">Main course</a></li>
-                                                <li><a data-lang="dessert" href="#"
-                                                        onclick="changeGroup('dessert')">Dessert</a></li>
-                                                <li><a data-lang="snack" href="#" onclick="changeGroup('snack')">Snack</a>
+                                                <li><a data-lang="appetizer" href="receipes.html"
+                                                        onclick="localStorage.setItem('group', 'appetizer');setBreadcrumb('appetizer')">Appetizer</a></li>
+                                                <li><a data-lang="maincourse" href="receipes.html"
+                                                        onclick="localStorage.setItem('group', 'maincourse');setBreadcrumb('maincourse')">Main course</a></li>
+                                                <li><a data-lang="dessert" href="receipes.html"
+                                                        onclick="localStorage.setItem('group', 'dessert');setBreadcrumb('dessert')">Dessert</a></li>
+                                                <li><a data-lang="snack" href="receipes.html" onclick="localStorage.setItem('group', 'snack');setBreadcrumb('snack')">Snack</a>
                                                 </li>
     
     
@@ -239,6 +239,9 @@
                         <div class=" text-left">
                             <h3>Video Tutorial</h3>
                         </div>
+                        <div id="video">
+
+                        </div>
                         <!--<video width="320" height="240" controls>
                             <source src="videos/.mp4" type="video/mp4">
                         </video>-->
@@ -248,50 +251,49 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class="section-heading text-left">
-                            <h3>Reviews</h3>
-                        </div>
-                    </div>
-                </div>
-                <div id="reviews">
-
-                
-                <br>
-                <div class="row">
-                    <div class="col-12">
                         <div class=" text-left">
                             <h3>Write a review</h3>
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12">
                         <div class="contact-form-area">
-                            <form action="#" method="post">
+                            <form>
                                 <div class="row">
                                     <div class="col-12 col-md-4">
                                         <div class="receipe-ratings text-left my-5">
-                                            <div class="ratings">
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            <div class="ratings" id="reviewStars">
+                                                <i class="rating__star fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="rating__star fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="rating__star fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="rating__star fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="rating__star fa fa-star-o" aria-hidden="true"></i>
                                             </div>
+                                        <span class="d-none" id="userStarRating"></span>
                                         </div>
                                     </div>
+                                    <!-- <div class="col-12">
+                                        <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
+                                    </div> -->
                                     <div class="col-12">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                                     </div>
                                     <div class="col-12">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn delicious-btn mt-30" type="submit">Submit a review</button>
+                                        <button class="btn delicious-btn mt-30" type="button" onclick="addReview()">Submit a review</button>
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-heading text-left">
+                            <h3>Reviews</h3>
+                        </div>
+                        <div id="reviews">
+
                         </div>
                     </div>
                 </div>

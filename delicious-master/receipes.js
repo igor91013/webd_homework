@@ -121,6 +121,7 @@ var recipes =
 
             difficulty: "2",
             id: 3,
+            reviews: []
         },
 
         {

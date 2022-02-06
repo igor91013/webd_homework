@@ -8,13 +8,12 @@ function loadRecipeData(recipeData) {
 
     // Pictures
 
-    for (let i = 1; i <=3 ; i++)
-    {
-        let picture = document.getElementById("img"+ i);
-        if( recipeData.pictures) {
-            picture.src = "images/" + recipeData.pictures[i-1];
+    for (let i = 1; i <= 3; i++) {
+        let picture = document.getElementById("img" + i);
+        if (recipeData.pictures) {
+            picture.src = "images/" + recipeData.pictures[i - 1];
         }
-        
+
     }
 
     // Header
@@ -79,7 +78,7 @@ function loadRecipeData(recipeData) {
     //Ingredients
     let ingredients = recipeData.ingredients;
     count = 0;
-    if (ingredients) {
+    if (ingredients.length > 0) {
         ingredients.forEach(element => {
             let div = document.createElement("div");
             div.className = "custom-control custom-checkbox";
@@ -113,12 +112,12 @@ function loadRecipeData(recipeData) {
     }
 
     //Reviews
-    if(recipeData.reviews) {
+    if (recipeData.reviews) {
         let reviews = recipeData.reviews;
         count = 0;
         let numElem = reviews.length;
         reviews.forEach(element => {
-    
+
             let div_1 = document.createElement("div");
             div_1.className = "row";
             let div_1_1 = document.createElement("div");
@@ -173,39 +172,64 @@ function loadRecipeData(recipeData) {
             }
         });
     }
-    
+
 }
 
-function showStars(num) {
-    let reviewStars = document.getElementById("reviewStars").childNodes;
-    let count = 0;
-    while (count < reviewStars.length) {
-        if (reviewStars[count].nodeType != Node.TEXT_NODE) {
-            if (num > 0) {
-                reviewStars[count].className = "fa fa-star";
-                num--;
+const ratingStars = [...document.getElementsByClassName("rating__star")];
+
+function executeRating(stars) {
+    const starClassActive = "rating__star fa fa-star";
+    const starClassUnactive = "rating__star fa fa-star-o";
+    const starsLength = stars.length;
+    let i;
+    stars.map((star) => {
+        star.onclick = () => {
+            i = stars.indexOf(star);
+            console.log(i + 1)
+            document.getElementById("userStarRating").textContent = i + 1
+            if (star.className.indexOf(starClassUnactive) !== -1) {
+                for (i; i >= 0; --i) stars[i].className = starClassActive;
+            } else {
+                for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
             }
-        }
-        count++;
-    }
+        };
+    });
 }
 
-function hideStars() {
-    let reviewStars = document.getElementById("reviewStars").childNodes;
-    let count = 0;
-    while (count < 5) {
-        if (reviewStars[count].nodeType != Node.TEXT_NODE) {
-            if (num > 0) {
-                reviewStars[count].className = "fa fa-star-o";
-                num--;
-            }
-        }
-        count++;
-    }
-    alert("a");
-}
+executeRating(ratingStars);
+
+
 
 function addReview() {
-    let title = document.getElementById("title");
-    let message = document.getElementById("message");
+    let idRec = JSON.parse(localStorage.getItem("recipe-data")).id;
+    let text = document.getElementById("message").value;
+    let rating = Number(document.getElementById("userStarRating").textContent);
+    let today = new Date();
+    let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear()
+
+    const review = {
+        user: JSON.parse(sessionStorage.getItem("ulogovan")).username,
+        date: date,
+        rating,
+        title: '',
+        text
+    }
+
+
+    let recipes = JSON.parse(localStorage.getItem("recipes"));
+    (recipes[idRec].reviews).push(review);
+
+    let helpArray = []
+
+    recipes[idRec].reviews.forEach(review => {
+        helpArray.push(review.rating)
+    })
+    let sum = 0
+    helpArray.forEach(el => { sum += el })
+    
+    let middleRating = sum / (recipes[idRec].reviews.length);
+    recipes[idRec].rating=middleRating;
+    localStorage.setItem("recipes", JSON.stringify(recipes));
+    localStorage.setItem("recipe-data", JSON.stringify(recipes[idRec]));
+    //document.location.reload()
 }

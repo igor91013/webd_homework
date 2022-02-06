@@ -187,18 +187,20 @@ function addRecipe() {
   let text = document.getElementById('rectext').value;
   
   let type = document.querySelector('input[name="groupp"]:checked').value;
-  let instruction = document.getElementById('recinstr').value;
+  let instruction = document.getElementById('recinstr').value.split(",");
   let length = document.getElementById('rectime').value;
   let difficulty = document.querySelector('input[name="diffic"]:checked').value;
-  let ingredients = document.getElementById('recingr').value;
+  let ingredients = document.getElementById('recingr').value.split(",");
 
+  let today = new Date();
+  let date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear()
   
 
   if(title==null || instruction==null ||length==null){
     return alert("Molimo popunite potrebna polja")
   }
 
-  let rec = { type: type, thumbnail: "images/added.jpg", title: title, date:"9.2.2022", author: author, text:text, rating:null, difficulty: difficulty, id: idRec, preparation: instruction, ingredients: ingredients, cooking: length }
+  let rec = { type: type, thumbnail: "images/added.jpg", title: title, date:date, author: author, text:text, rating:null, difficulty: difficulty, id: idRec, preparation: instruction, ingredients: ingredients, cooking: length, reviews: []}
   
   let recipess=JSON.parse(localStorage.getItem("recipes"));
   recipess.push(rec);
