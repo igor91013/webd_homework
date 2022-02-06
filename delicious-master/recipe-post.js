@@ -228,8 +228,8 @@ function addReview() {
     helpArray.forEach(el => { sum += el })
     
     let middleRating = sum / (recipes[idRec].reviews.length);
-    recipes[idRec].rating=middleRating;
+    recipes[idRec].rating=middleRating.toFixed(2);
     localStorage.setItem("recipes", JSON.stringify(recipes));
     localStorage.setItem("recipe-data", JSON.stringify(recipes[idRec]));
-    //document.location.reload()
+    document.location.reload()
 }
