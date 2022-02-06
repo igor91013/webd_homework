@@ -24,7 +24,7 @@ function turnonLS() {
 function initHomePage() {
   getLanguage();
 
-  
+
   if (!sessionStorage.getItem("ulogovan"))
     document.getElementById("logoutbut").style.display = 'none';
 
@@ -135,10 +135,10 @@ function loadProfileRecipes(rcp) {
 
       let a3 = document.createElement("a");
       a3.href = "#";
-      a3.onclick = function(){deleteRecipe(recipe.id)}
+      a3.onclick = function () { deleteRecipe(recipe.id) }
       a3.className = "btn delicious-btn m-1";
       a3.textContent = "Delete";
-      a3.setAttribute("data-lang","delete");
+      a3.setAttribute("data-lang", "delete");
 
 
 
@@ -163,17 +163,17 @@ function loadProfileRecipes(rcp) {
 }
 
 function deleteRecipe(id) {
- 
+
   let recipess = JSON.parse(localStorage.getItem("recipes"));
- 
+
   let newrecipes = recipess.filter(function (ele) {
     return ele.id != id;
   });
-  
-  
+
+
   localStorage.setItem("recipes", JSON.stringify(newrecipes));
   document.location.reload();
-  
+
 
 
 }
@@ -181,11 +181,11 @@ function deleteRecipe(id) {
 function addRecipe() {
   let ulogovan = sessionStorage.getItem("ulogovan");
   let author = JSON.parse(ulogovan).username;
-  
+
   let idRec = JSON.parse(localStorage.getItem("recipes")).length;
   let title = document.getElementById('rectitle').value;
   let text = document.getElementById('rectext').value;
-  
+
   let type = document.querySelector('input[name="groupp"]:checked').value;
   let instruction = document.getElementById('recinstr').value.split(",");
   let length = document.getElementById('rectime').value;
@@ -193,28 +193,44 @@ function addRecipe() {
   let ingredients = document.getElementById('recingr').value.split(",");
 
   let today = new Date();
-  let date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear()
-  
+  let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear()
 
-  if(title==null || instruction==null ||length==null){
+
+  if (title == null || instruction == null || length == null) {
     return alert("Molimo popunite potrebna polja")
   }
 
-  let rec = { type: type, thumbnail: "images/added.jpg", title: title, date:date, author: author, text:text, rating:null, difficulty: difficulty, id: idRec, preparation: instruction, ingredients: ingredients, cooking: length, reviews: []}
-  
-  let recipess=JSON.parse(localStorage.getItem("recipes"));
+  let rec = { type: type, thumbnail: "images/added.jpg", title: title, date: date, author: author, text: text, rating: null, difficulty: difficulty, id: idRec, preparation: instruction, ingredients: ingredients, cooking: length, reviews: [] }
+
+  let recipess = JSON.parse(localStorage.getItem("recipes"));
   recipess.push(rec);
-  
-  localStorage.setItem("recipes",JSON.stringify(recipess));
+
+  localStorage.setItem("recipes", JSON.stringify(recipess));
   console.log(localStorage.getItem("recipes"));
 
-  
+
 
   return alert("Uspesno ste dodali recept");
 
 
 
 
+}
+
+function initRecipePost() {
+  ulogovan=JSON.parse(sessionStorage.getItem("ulogovan"));
+  let data = JSON.parse(localStorage.getItem("recipe-data"));
+  loadRecipeData(data);
+
+  let recipess = JSON.parse(localStorage.getItem("recipes"));
+
+
+  getLanguage();
+
+  if (ulogovan)
+    turnoffLS();
+
+  setBcRp();
 }
 
 
@@ -225,9 +241,9 @@ function initMyprofile() {
     window.location.href = "login.html";
 
   }
-  let recipess=JSON.parse(localStorage.getItem("recipes"));
+  let recipess = JSON.parse(localStorage.getItem("recipes"));
 
-  
+
   document.getElementById("profileusername").innerText = JSON.parse(ulogovan).username;
   getLanguage();
 
@@ -236,7 +252,7 @@ function initMyprofile() {
   loadProfileRecipes(JSON.parse(localStorage.getItem("recipes")));
 }
 
-function initAddRecipePage(){
+function initAddRecipePage() {
   getLanguage();
   let ulogovan = sessionStorage.getItem("ulogovan");
   if (!ulogovan) {
@@ -244,5 +260,5 @@ function initAddRecipePage(){
 
   }
   if (ulogovan)
-  turnoffLS();
+    turnoffLS();
 }

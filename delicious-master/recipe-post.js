@@ -1,7 +1,4 @@
-function initReceipePostPage() {
-    let data = JSON.parse(localStorage.getItem("recipe-data"));
-    loadRecipeData(data);
-}
+
 
 function loadRecipeData(recipeData) {
     let language = localStorage.getItem("language");
@@ -78,7 +75,7 @@ function loadRecipeData(recipeData) {
     //Ingredients
     let ingredients = recipeData.ingredients;
     count = 0;
-    if (ingredients.length > 0) {
+    if (ingredients!=null && ingredients.length > 0) {
         ingredients.forEach(element => {
             let div = document.createElement("div");
             div.className = "custom-control custom-checkbox";
@@ -232,4 +229,68 @@ function addReview() {
     localStorage.setItem("recipes", JSON.stringify(recipes));
     localStorage.setItem("recipe-data", JSON.stringify(recipes[idRec]));
     document.location.reload()
+}
+
+function setBcRp() {
+    let ul = document.createElement("ul");
+    ul.className = "breadcrumbs";
+    let li1 = document.createElement("li");
+    li1.className = "breadcrumbs__item";
+    let li2 = document.createElement("li");
+    li2.className = "breadcrumbs__item";
+    let li3 = document.createElement("li");
+    li3.className = "breadcrumbs__item";
+    let li4 = document.createElement("li");
+    li4.className = "breadcrumbs__item";
+    a1 = document.createElement("a");
+    a2 = document.createElement("a");
+    a3 = document.createElement("a");
+    a4 = document.createElement("a");
+
+    a1.setAttribute("href", "index.html");
+    a2.setAttribute("href", "receipes.html");
+    a3.setAttribute("href", "#");
+    a1.setAttribute("data-lang", "home");
+    a2.setAttribute("data-lang", "receipes");
+    a4.setAttribute("href", "#");
+
+    a1.className = "breadcrumbs__link";
+    a2.className = "breadcrumbs__link";
+    a3.className = "breadcrumbs__link";
+    a4.className="breadcrumbs__link--active"
+
+    a1.appendChild(document.createTextNode("Home"));
+    a2.appendChild(document.createTextNode("Receipes"));
+
+
+    li1.appendChild(a1);
+    li2.appendChild(a2);
+
+
+    ul.appendChild(li1);
+    ul.appendChild(li2);
+    ul.appendChild(li3);
+    ul.appendChild(li4);
+    bc = document.getElementById("rp-breadcrumbsplace");
+
+   
+
+
+    let group=(JSON.parse(localStorage.getItem("recipe-data"))).type;
+    
+    a3.appendChild(document.createTextNode(group));
+    a3.setAttribute("data-lang", group);
+
+    let title=(JSON.parse(localStorage.getItem("recipe-data"))).title;
+    a4.appendChild(document.createTextNode(title));
+    
+    li3.appendChild(a3);
+    li4.appendChild(a4);
+
+    bc.appendChild(ul);
+
+    for (const property in data) {
+        $("body").find(`[data-lang="${property}"]`).text(data[property])
+    }
+
 }
