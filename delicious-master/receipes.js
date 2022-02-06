@@ -239,7 +239,7 @@ function removeRecipes() {
 }
 
 function changeGroup(grp) {
-    JSON.stringify(localStorage.setItem("recpagetype", grp));
+    localStorage.setItem("recpagetype", grp);
     group = grp;
     if (grp == 'appetizer') {
 
