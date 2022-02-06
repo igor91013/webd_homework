@@ -1,4 +1,33 @@
+$(document).ready(function () {
 
+    var recipe = JSON.parse(localStorage.getItem("recipe-data"));
+
+
+   // $("#recept").empty();
+
+   /* var date = new Date(recipe.date);
+    $("#recept").append("<p>Datum: " + date.toDateString() + "</p>");
+    $("#recept").append("<h4>Ime recepta: " + recipe.title + "</h4>");
+
+
+    $("#recept").append("<p>Trajanje: " + recipe.cooking + "</p>");*/
+
+
+
+    $("#buttonPDF").click(function () {
+        var pdf = new jsPDF('p', 'pt', 'letter');
+        pdf.canvas.height = 72 * 11;
+        pdf.canvas.width = 72 * 8.5;
+
+        pdf.fromHTML($("#recept").html());
+
+        pdf.save(recipe.title + '.pdf');
+
+    });
+
+
+
+});
 
 function loadRecipeData(recipeData) {
     let language = localStorage.getItem("language");
@@ -50,7 +79,7 @@ function loadRecipeData(recipeData) {
 
     //General info
     document.getElementById("cooking").innerHTML = recipeData.cooking;
-    document.getElementById("yields").innerHTML = recipeData.yields;
+   // document.getElementById("yields").innerHTML = recipeData.yields;
 
     //Preparation steps
     let steps = recipeData.preparation;
@@ -75,7 +104,7 @@ function loadRecipeData(recipeData) {
     //Ingredients
     let ingredients = recipeData.ingredients;
     count = 0;
-    if (ingredients!=null && ingredients.length > 0) {
+    if (ingredients != null && ingredients.length > 0) {
         ingredients.forEach(element => {
             let div = document.createElement("div");
             div.className = "custom-control custom-checkbox";
@@ -198,6 +227,8 @@ executeRating(ratingStars);
 
 
 function addReview() {
+    if (!sessionStorage.getItem("ulogovan"))
+        return alert("Morate biti ulogovani");
     let idRec = JSON.parse(localStorage.getItem("recipe-data")).id;
     let text = document.getElementById("message").value;
     let rating = Number(document.getElementById("userStarRating").textContent);
@@ -223,9 +254,9 @@ function addReview() {
     })
     let sum = 0
     helpArray.forEach(el => { sum += el })
-    
+
     let middleRating = sum / (recipes[idRec].reviews.length);
-    recipes[idRec].rating=middleRating.toFixed(2);
+    recipes[idRec].rating = middleRating.toFixed(2);
     localStorage.setItem("recipes", JSON.stringify(recipes));
     localStorage.setItem("recipe-data", JSON.stringify(recipes[idRec]));
     document.location.reload()
@@ -257,7 +288,7 @@ function setBcRp() {
     a1.className = "breadcrumbs__link";
     a2.className = "breadcrumbs__link";
     a3.className = "breadcrumbs__link";
-    a4.className="breadcrumbs__link--active"
+    a4.className = "breadcrumbs__link--active"
 
     a1.appendChild(document.createTextNode("Home"));
     a2.appendChild(document.createTextNode("Receipes"));
@@ -273,24 +304,23 @@ function setBcRp() {
     ul.appendChild(li4);
     bc = document.getElementById("rp-breadcrumbsplace");
 
-   
 
 
-    let group=(JSON.parse(localStorage.getItem("recipe-data"))).type;
-    
+
+    let group = (JSON.parse(localStorage.getItem("recipe-data"))).type;
+
     a3.appendChild(document.createTextNode(group));
     a3.setAttribute("data-lang", group);
 
-    let title=(JSON.parse(localStorage.getItem("recipe-data"))).title;
+    let title = (JSON.parse(localStorage.getItem("recipe-data"))).title;
     a4.appendChild(document.createTextNode(title));
-    
+
     li3.appendChild(a3);
     li4.appendChild(a4);
 
     bc.appendChild(ul);
 
-    for (const property in data) {
-        $("body").find(`[data-lang="${property}"]`).text(data[property])
-    }
+
 
 }
+

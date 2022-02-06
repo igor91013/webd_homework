@@ -16,7 +16,7 @@ var recipes =
 
             video: "",
             cooking: "17 mins",
-            yields: "4 servings",
+         //   yields: "4 servings",
 
             preparation:
                 [

@@ -24,6 +24,10 @@
     <script src="register.js"></script>
     <script src="skripta.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+
+
 </head>
 
 <body onload="initRecipePost()">
@@ -50,100 +54,105 @@
         </div>
     </div>
 
-        <!-- ##### Header Area Start ##### -->
-        <header class="header-area">
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
 
-            <!-- Navbar Area -->
-            <div class="delicious-main-menu">
-    
-                <div class="classy-nav-container breakpoint-off">
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
 
-                    <div class="container">
+            <div class="classy-nav-container breakpoint-off">
+
+                <div class="container">
+
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+                        <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+
+                        <!-- Logo -->
+
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
 
                         <!-- Menu -->
-                        <nav class="classy-navbar justify-content-between" id="deliciousNav">
-                            <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-    
-                            <!-- Logo -->
-    
-    
-                            <!-- Navbar Toggler -->
-                            <div class="classy-navbar-toggler">
-                                <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                             </div>
-    
-                            <!-- Menu -->
-                            <div class="classy-menu">
-    
-                                <!-- close btn -->
-                                <div class="classycloseIcon">
-                                    <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a data-lang="home" href="index.html">Home</a></li>
+                                    <li class="active"><a data-lang="receipes" href="receipes.html"
+                                            onclick="localStorage.removeItem('group')">Receipes</a>
+                                        <ul class="dropdown" id="padajuca">
+                                            <li><a data-lang="appetizer" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'appetizer');setBreadcrumb('appetizer')">Appetizer</a>
+                                            </li>
+                                            <li><a data-lang="maincourse" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'maincourse');setBreadcrumb('maincourse')">Main
+                                                    course</a></li>
+                                            <li><a data-lang="dessert" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'dessert');setBreadcrumb('dessert')">Dessert</a>
+                                            </li>
+                                            <li><a data-lang="snack" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'snack');setBreadcrumb('snack')">Snack</a>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+
+                                    <li><a data-lang="addrecipe" href="#">Add receipe</a></li>
+                                    <li><a data-lang="myprofile" href="#">My profile</a>
+                                        <ul id="logsnav" class="dropdown">
+                                            <li id="loginbut"><a data-lang="login" href="login.html">Log in</a>
+
+                                            <li id="signupbut"><a data-lang="signup" href="signup.html">Sign up</a>
+                                            <li id="logoutbut"><a data-lang="logout" href="#" onclick="logOut()">Log
+                                                    out</a>
+                                        </ul>
+                                    </li>
+                                    <li><a data-lang="aboutus" href="#">About us</a></li>
+
+                                    <li><a data-lang="language" href="#">Language</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#" onclick="setLanguage('sr')"><span
+                                                        class="flag-icon flag-icon-rs"></span>&nbsp;Serbian</a></li>
+                                            <li><a href="#" onclick="setLanguage('en')"><span
+                                                        class="flag-icon flag-icon-gb"></span>&nbsp;English</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <!-- Newsletter Form -->
+                                <div class="search-btn">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
                                 </div>
-    
-                                <!-- Nav Start -->
-                                <div class="classynav">
-                                    <ul>
-                                        <li><a data-lang="home" href="index.html">Home</a></li>
-                                        <li class="active"><a data-lang="receipes" href="receipes.html" onclick="localStorage.removeItem('group')">Receipes</a>
-                                            <ul class="dropdown" id="padajuca">
-                                                <li><a data-lang="appetizer" href="receipes.html"
-                                                        onclick="localStorage.setItem('group', 'appetizer');setBreadcrumb('appetizer')">Appetizer</a></li>
-                                                <li><a data-lang="maincourse" href="receipes.html"
-                                                        onclick="localStorage.setItem('group', 'maincourse');setBreadcrumb('maincourse')">Main course</a></li>
-                                                <li><a data-lang="dessert" href="receipes.html"
-                                                        onclick="localStorage.setItem('group', 'dessert');setBreadcrumb('dessert')">Dessert</a></li>
-                                                <li><a data-lang="snack" href="receipes.html" onclick="localStorage.setItem('group', 'snack');setBreadcrumb('snack')">Snack</a>
-                                                </li>
-    
-    
-                                            </ul>
-                                        </li>
-    
-                                        <li><a data-lang="addrecipe" href="#">Add receipe</a></li>
-                                        <li><a data-lang="myprofile" href="#">My profile</a>
-                                            <ul id="logsnav" class="dropdown">
-                                                <li id="loginbut"><a data-lang="login" href="login.html">Log in</a>
-    
-                                                <li id="signupbut"><a data-lang="signup" href="signup.html">Sign up</a>
-                                                <li id="logoutbut"><a data-lang="logout" href="#" onclick="logOut()">Log
-                                                        out</a>
-                                            </ul>
-                                        </li>
-                                        <li><a data-lang="aboutus" href="#">About us</a></li>
-    
-                                        <li><a data-lang="language" href="#">Language</a>
-                                            <ul class="dropdown">
-                                                <li><a href="#" onclick="setLanguage('sr')"><span
-                                                            class="flag-icon flag-icon-rs"></span>&nbsp;Serbian</a></li>
-                                                <li><a href="#" onclick="setLanguage('en')"><span
-                                                            class="flag-icon flag-icon-gb"></span>&nbsp;English</a></li>
-    
-                                            </ul>
-                                        </li>
-                                    </ul>
-    
-                                    <!-- Newsletter Form -->
-                                    <div class="search-btn">
-                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                    </div>
-    
-                                </div>
-                                <!-- Nav End -->
+
                             </div>
-                        </nav>
-                    </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
                 </div>
             </div>
-    
-            
-        </header>
-    
-    
-        <section class="hero-area">
-            <div id="rp-breadcrumbsplace">
-                
-            </div>
-            </section>
+        </div>
+
+
+    </header>
+
+
+    <section class="hero-area">
+        <div id="rp-breadcrumbsplace">
+
+        </div>
+    </section>
 
     <div class="receipe-post-area section-padding-80">
 
@@ -152,7 +161,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="receipe-slider owl-carousel">
-                        
+
                     </div>
                 </div>
             </div>
@@ -161,56 +170,57 @@
         <!-- Receipe Content Area -->
         <div class="receipe-content-area">
             <div class="container">
-                
+
                 <div class="row">
-                    <div class="col-3  text-center" >
-                        <img id="img1" src="" alt="" style="height: 200px; max-width: 100%;"> 
-                     </div >
-                     <div class="col-3 offset-1 text-center">
-                         <img id="img2" src="" alt="" style="height: 200px; max-width: 100%;">
-                     </div>
-                     <div class="col-3 offset-1  text-center">
-                         <img id="img3" src="" alt="" style="height: 200px; max-width: 100%;">
-                     </div>
+                    <div class="col-3  text-center">
+                        <img id="img1" src="" alt="" style="height: 200px; max-width: 100%;">
+                    </div>
+                    <div class="col-3 offset-1 text-center">
+                        <img id="img2" src="" alt="" style="height: 200px; max-width: 100%;">
+                    </div>
+                    <div class="col-3 offset-1  text-center">
+                        <img id="img3" src="" alt="" style="height: 200px; max-width: 100%;">
+                    </div>
                 </div>
-                
-                <div class="row">
-                    <div class="col-12 col-md-8">
-                        <div class="receipe-headline my-5">
-                            <span id="date">April 05, 2018</span>
-                            <h2 id="title">Vegetarian cheese salad</h2>
-                            <div class="receipe-duration">
-                                <b>Cooking time:<span id="cooking"></span></b>
-                                <b>Yields:<span id="yields"></span></b>
+                <div id="recept">
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <div class="receipe-headline my-5">
+                                <span id="date">April 05, 2018</span>
+                                <h2 id="title">Vegetarian cheese salad</h2>
+                                <div class="receipe-duration">
+                                    <b>Cooking time:<span id="cooking"></span></b>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="receipe-ratings text-right my-5">
+                                <div class="ratings" id="ratings">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                                <a href="#" class="btn delicious-btn" id="difficulty">For Begginers</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-4">
-                        <div class="receipe-ratings text-right my-5">
-                            <div class="ratings" id="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                            <a href="#" class="btn delicious-btn" id="difficulty">For Begginers</a>
+                    <div class="row">
+                        <div class="col-12 col-lg-8" id="preparation">
+
                         </div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-12 col-lg-8" id="preparation">
-                          
-                    </div>
+                        <!-- Ingredients -->
+                        <div class="col-12 col-lg-4">
+                            <div class="ingredients">
+                                <h4>Ingredients</h4>
+                                <div id="ingredients">
 
-                    <!-- Ingredients -->
-                    <div class="col-12 col-lg-4">
-                        <div class="ingredients">
-                            <h4>Ingredients</h4>
-                            <div id="ingredients">
-
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -231,12 +241,21 @@
                         <br>
                     </div>
                 </div>
+                <div>
+                    <button type="button" role="button" id="buttonPDF" class="ml-2 btn btn-white btn-outline-white">PDF
+                        export</button>
+                </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class=" text-left">
-                            <h3>Write a review</h3>
+                        <div class="text-left mt-30">
+                            <h3>Write a review</h3></span>
+
+
+
                         </div>
+
                     </div>
+
                 </div>
                 <div class="row">
                     <div class="col-12">
@@ -252,17 +271,19 @@
                                                 <i class="rating__star fa fa-star-o" aria-hidden="true"></i>
                                                 <i class="rating__star fa fa-star-o" aria-hidden="true"></i>
                                             </div>
-                                        <span class="d-none" id="userStarRating"></span>
+                                            <span class="d-none" id="userStarRating"></span>
                                         </div>
                                     </div>
                                     <!-- <div class="col-12">
                                         <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
                                     </div> -->
                                     <div class="col-12">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10"
+                                            placeholder="Message" required></textarea>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn delicious-btn mt-30" type="button" onclick="addReview()">Submit a review</button>
+                                        <button class="btn delicious-btn mt-30" type="button"
+                                            onclick="addReview()">Submit a review</button>
                                     </div>
                                 </div>
                             </form>
@@ -271,7 +292,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class="section-heading text-left">
+                        <div class="section-heading text-left mt-30">
                             <h3>Reviews</h3>
                         </div>
                         <div id="reviews">
@@ -283,9 +304,8 @@
         </div>
     </div>
 
-    
 
-    <!-- ##### Footer Area Start ##### -->
+
     <footer class="footer-area">
         <div class="container h-100">
             <div class="row h-100">
@@ -295,9 +315,13 @@
                         <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
                     </div>
                     <!-- Copywrite -->
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    <p class="text-right">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>,
+                        Димитрије Поповић, Игор Дукић,
+                        <br>
+                        Одсек за софтверско инжењерство Електротехничког факултета Универзитета у Београду
+                    </p>
                 </div>
             </div>
         </div>
@@ -316,6 +340,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Active js -->
     <script src="js/active.js"></script>
     <script src="recipe-post.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 </body>
 
 </html>
