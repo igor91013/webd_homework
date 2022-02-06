@@ -239,7 +239,7 @@ function removeRecipes() {
 }
 
 function changeGroup(grp) {
-
+    JSON.stringify(localStorage.setItem("recpagetype", grp));
     group = grp;
     if (grp == 'appetizer') {
 
@@ -377,13 +377,13 @@ function loadRecipes(rcp) {
             a2.className = "btn delicious-btn m-1";
             switch (recipe.difficulty) {
                 case "1": a2.innerHTML = "beginner";
-                a2.setAttribute("data-lang","beginner")
+                    a2.setAttribute("data-lang", "beginner")
                     break;
                 case "2": a2.innerHTML = "intermediate";
-                a2.setAttribute("data-lang","intermediate")
+                    a2.setAttribute("data-lang", "intermediate")
                     break;
                 case "3": a2.innerHTML = "advanced";
-                a2.setAttribute("data-lang","advanced")
+                    a2.setAttribute("data-lang", "advanced")
                     break;
                 default: a2.innerHTML = "unknown";
             }
@@ -409,13 +409,18 @@ function loadRecipes(rcp) {
 }
 
 function searchRecipes() {
+    let recipes = JSON.parse(localStorage.getItem("recipes"))
     let key = document.getElementById("search").value;
 
     let pool = [];
-    recipes.forEach(recipe => {
-        if (recipe.type == group)
-            pool.push(recipe);
-    });
+    if (group != null) {
+        recipes.forEach(recipe => {
+            if (recipe.type == group)
+                pool.push(recipe);
+        });
+    }
+    else
+        pool = recipes;
 
     for (let i = 0; i < key.length; i++) {
         for (let j = 0; j < pool.length; j++) {
