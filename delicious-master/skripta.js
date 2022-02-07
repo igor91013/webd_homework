@@ -43,8 +43,11 @@ function initReceipesPage() {
   if (sessionStorage.getItem("ulogovan")) {
     turnoffLS();
   }
+ 
 
   loadRecipes(JSON.parse(localStorage.getItem("recipes")));
+  if (localStorage.getItem("group"))
+  setBreadcrumb()
 
 
 }

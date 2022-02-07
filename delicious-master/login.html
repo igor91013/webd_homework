@@ -86,20 +86,24 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a data-lang="home" href="index.html">Home</a></li>
-                                    <li><a data-lang="receipes" href="receipes.html">Receipes</a>
-                                        <ul class="dropdown" id="padajuca">
-                                            <li><a data-lang="appetizer" href="#"
-                                                    onclick="changeGroup('appetizer')">Appetizer</a></li>
-                                            <li><a data-lang="maincourse" href="#"
-                                                    onclick="changeGroup('maincourse')">Main course</a></li>
-                                            <li><a data-lang="dessert" href="#"
-                                                    onclick="changeGroup('dessert')">Dessert</a></li>
-                                            <li><a data-lang="snack" href="#" onclick="changeGroup('snack')">Snack</a>
-                                            </li>
+                                    <li><a data-lang="receipes" href="receipes.html"
+                                        onclick="localStorage.removeItem('group')">Receipes</a>
+                                    <ul class="dropdown" id="padajuca">
+                                        <li><a data-lang="appetizer" href="receipes.html"
+                                                onclick="localStorage.setItem('group', 'appetizer');">Appetizer</a>
+                                        </li>
+                                        <li><a data-lang="maincourse" href="receipes.html"
+                                                onclick="localStorage.setItem('group', 'maincourse');">Main
+                                                course</a></li>
+                                        <li><a data-lang="dessert" href="receipes.html"
+                                                onclick="localStorage.setItem('group', 'dessert');">Dessert</a></li>
+                                        <li><a data-lang="snack" href="receipes.html"
+                                                onclick="localStorage.setItem('group', 'snack');">Snack</a>
+                                        </li>
 
 
-                                        </ul>
-                                    </li>
+                                    </ul>
+                                </li>
 
                                     <li><a data-lang="addrecipe" href="#">Add receipe</a></li>
                                     <li class="active"><a data-lang="myprofile" href="#" onclick="myProfile()">My profile</a>

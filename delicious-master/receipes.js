@@ -16,7 +16,7 @@ var recipes =
 
             video: "",
             cooking: "17 mins",
-         //   yields: "4 servings",
+            //   yields: "4 servings",
 
             preparation:
                 [
@@ -238,18 +238,13 @@ function removeRecipes() {
     }
 }
 
-function changeGroup(grp) {
-    localStorage.setItem("recpagetype", grp);
-    group = grp;
-    if (grp == 'appetizer') {
-
-    }
-    loadRecipes(JSON.parse(localStorage.getItem("recipes")));
-}
 
 
 
-function setBreadcrumb(page) {
+
+function setBreadcrumb() {
+    let gr = localStorage.getItem("group");
+    console.log(gr)
     let ul = document.createElement("ul");
     ul.className = "breadcrumbs";
     let li1 = document.createElement("li");
@@ -282,29 +277,43 @@ function setBreadcrumb(page) {
     ul.appendChild(li1);
     ul.appendChild(li2);
     ul.appendChild(li3);
+
+
+
     bc = document.getElementById("breadcrumbsplace");
+
 
     while (bc.firstChild) {
         bc.removeChild(bc.firstChild);
     }
 
 
-    if (page == 'appetizer') {
+
+
+
+
+
+
+
+
+
+
+    if (gr == 'appetizer') {
         a3.appendChild(document.createTextNode("Appetizer"));
         a3.setAttribute("data-lang", "appetizer")
     }
 
-    if (page == 'maincourse') {
+    if (gr == 'maincourse') {
         a3.appendChild(document.createTextNode("Main course"));
         a3.setAttribute("data-lang", "maincourse")
     }
 
-    if (page == 'dessert') {
+    if (gr == 'dessert') {
         a3.appendChild(document.createTextNode("Dessert"));
         a3.setAttribute("data-lang", "dessert")
     }
 
-    if (page == 'snack') {
+    if (gr == 'snack') {
         a3.appendChild(document.createTextNode("Snack"));
         a3.setAttribute("data-lang", "snack")
     }
@@ -323,6 +332,7 @@ function setBreadcrumb(page) {
 
 
 function loadRecipes(rcp) {
+    group = localStorage.getItem("group");
     removeRecipes();
     loadedRecipes = [];
 

@@ -85,15 +85,19 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a data-lang="home" href="index.html">Home</a></li>
-                                    <li class="active"><a data-lang="receipes" href="receipes.html">Receipes</a>
+                                    <li><a data-lang="receipes" href="receipes.html"
+                                            onclick="localStorage.removeItem('group')">Receipes</a>
                                         <ul class="dropdown" id="padajuca">
-                                            <li><a data-lang="appetizer" href="#"
-                                                    onclick="changeGroup('appetizer');setBreadcrumb('appetizer')">Appetizer</a></li>
-                                            <li><a data-lang="maincourse" href="#"
-                                                    onclick="changeGroup('maincourse');setBreadcrumb('maincourse')">Main course</a></li>
-                                            <li><a data-lang="dessert" href="#"
-                                                    onclick="changeGroup('dessert');setBreadcrumb('dessert')">Dessert</a></li>
-                                            <li><a data-lang="snack" href="#" onclick="changeGroup('snack');setBreadcrumb('snack')">Snack</a>
+                                            <li><a data-lang="appetizer" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'appetizer');">Appetizer</a>
+                                            </li>
+                                            <li><a data-lang="maincourse" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'maincourse');">Main
+                                                    course</a></li>
+                                            <li><a data-lang="dessert" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'dessert');">Dessert</a></li>
+                                            <li><a data-lang="snack" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'snack');">Snack</a>
                                             </li>
 
 
@@ -123,7 +127,7 @@
                                     </li>
                                 </ul>
 
-                                                   
+
 
                             </div>
                             <!-- Nav End -->
@@ -177,24 +181,13 @@
             <div class="d-flex flex-column flex-md-row justify-content-between py-4">
 
                 <div class="d-flex flex-column flex-md-row mr-md-30">
-                    <a
-                     data-lang="sortrat"
-                     href="#" 
-                     class="btn delicious-btn btn-4 m-1"
-                     id="rat" 
-                     name="asc"
-                     onclick="sortiraj('rat')">
+                    <a data-lang="sortrat" href="#" class="btn delicious-btn btn-4 m-1" id="rat" name="asc"
+                        onclick="sortiraj('rat')">
                         Sort by rating
                     </a>
 
-                    <a 
-                    data-lang="sortdif" 
-                    href="#" 
-                    class="btn delicious-btn btn-4 m-1" 
-                    id="diff"
-                    name="asc"
-                    onclick="sortiraj('diff')"
-                    >
+                    <a data-lang="sortdif" href="#" class="btn delicious-btn btn-4 m-1" id="diff" name="asc"
+                        onclick="sortiraj('diff')">
                         Sort by difficulty
                     </a>
                 </div>
@@ -203,11 +196,8 @@
                     <div>
                         <input class="form-control border border-success" id="search" type="text" placeholder="...">
                     </div>
-                    
-                    <button 
-                        data-lang="search" 
-                        class="btn delicious-btn btn-4 m-1"
-                        onclick="searchRecipes()">
+
+                    <button data-lang="search" class="btn delicious-btn btn-4 m-1" onclick="searchRecipes()">
                         Search
                     </button>
                 </div>
@@ -218,7 +208,7 @@
                     <div class="blog-posts-area" id="recipes">
 
                     </div>
-                    
+
                 </div>
 
                 <div class="col-12 col-lg-4">
@@ -228,8 +218,8 @@
             </div>
         </div>
     </div>
-   
-    
+
+
     <footer class="footer-area">
         <div class="container h-100">
             <div class="row h-100">

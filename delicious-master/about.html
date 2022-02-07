@@ -14,17 +14,17 @@
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
 
-   <!-- Core Stylesheet -->
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="nasstil.css">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
-   <script src="receipes.js"></script>
-   <script src="login.js"></script>
-   <script src="register.js"></script>
-   <script src="skripta.js"></script>
-   <script src="prevod.js"></script>
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nasstil.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="receipes.js"></script>
+    <script src="login.js"></script>
+    <script src="register.js"></script>
+    <script src="skripta.js"></script>
+    <script src="prevod.js"></script>
 
 </head>
 
@@ -35,13 +35,13 @@
         <img src="img/core-img/salad.png" alt="">
     </div>
 
-    
+
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
 
-        
-          
+
+
 
         <!-- Navbar Area -->
         <div class="delicious-main-menu">
@@ -71,15 +71,19 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a data-lang="home" href="index.html">Home</a></li>
-                                    <li><a data-lang="receipes" href="receipes.html">Receipes</a>
+                                    <li><a data-lang="receipes" href="receipes.html"
+                                            onclick="localStorage.removeItem('group')">Receipes</a>
                                         <ul class="dropdown" id="padajuca">
-                                            <li><a data-lang="appetizer" href="#"
-                                                    onclick="changeGroup('appetizer')">Appetizer</a></li>
-                                            <li><a data-lang="maincourse" href="#"
-                                                    onclick="changeGroup('maincourse')">Main course</a></li>
-                                            <li><a data-lang="dessert" href="#"
-                                                    onclick="changeGroup('dessert')">Dessert</a></li>
-                                            <li><a data-lang="snack" href="#" onclick="changeGroup('snack')">Snack</a>
+                                            <li><a data-lang="appetizer" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'appetizer');">Appetizer</a>
+                                            </li>
+                                            <li><a data-lang="maincourse" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'maincourse');">Main
+                                                    course</a></li>
+                                            <li><a data-lang="dessert" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'dessert');">Dessert</a></li>
+                                            <li><a data-lang="snack" href="receipes.html"
+                                                    onclick="localStorage.setItem('group', 'snack');">Snack</a>
                                             </li>
 
 
@@ -96,7 +100,7 @@
                                                     out</a>
                                         </ul>
                                     </li>
-                                    <li class="active" ><a data-lang="aboutus" href="#">About us</a></li>
+                                    <li class="active"><a data-lang="aboutus" href="#">About us</a></li>
 
                                     <li><a data-lang="language" href="#">Language</a>
                                         <ul class="dropdown">
@@ -109,7 +113,7 @@
                                     </li>
                                 </ul>
 
-                                
+
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -119,28 +123,28 @@
             </div>
         </div>
     </header>
-    
-    <section class="hero-area">
-    <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-            <a data-lang="home" href="index.html" class="breadcrumbs__link">Home</a>
-        </li>
-        <li class="breadcrumbs__item">
-            <a data-lang="aboutus" href="" class="breadcrumbs__link breadcrumbs__link--active">About us</a>
-        </li>
 
-    </ul>
-    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb1.jpg);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <div class="breadcumb-text text-center">
-                        <h2 data-lang="aboutus">About us</h2>
+    <section class="hero-area">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+                <a data-lang="home" href="index.html" class="breadcrumbs__link">Home</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a data-lang="aboutus" href="" class="breadcrumbs__link breadcrumbs__link--active">About us</a>
+            </li>
+
+        </ul>
+        <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb1.jpg);">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <div class="breadcumb-text text-center">
+                            <h2 data-lang="aboutus">About us</h2>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
     <!-- ##### Breadcumb Area End ##### -->
 
@@ -158,25 +162,45 @@
             <div class="row">
                 <div class="col-12">
                     <h6 data-lang="ourgoal" class="sub-heading pb-5">Our goal is to help u make some cool food</h6>
-                   
+
                 </div>
             </div>
 
-            
+
             <div class="row">
                 <div class="col-12">
                     <h6 data-lang="callus" class="sub-heading pb-5">Our phone number: (+381) 60 12345 6789</h6>
-                    
-                   
+
+
                 </div>
-                
+
             </div>
-            
-            
 
-          
 
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Bulevar%20kralja%20Aleksandra%2073&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de"></a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}</style></div>
+
+
+
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Bulevar%20kralja%20Aleksandra%2073&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                        href="https://www.pureblack.de"></a></div>
+                <style>
+                    .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 500px;
+                        width: 100%;
+                    }
+
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 500px;
+                        width: 100%;
+                    }
+                </style>
+            </div>
         </div>
     </section>
 
@@ -200,20 +224,20 @@
             </div>
         </div>
     </footer>
-   
-    
 
-   
-  
-    
+
+
+
+
+
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
-   
+
     <script src="js/bootstrap/popper.min.js"></script>
-    
+
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    
+
     <script src="js/plugins/plugins.js"></script>
-    
+
     <script src="js/active.js"></script>
 </body>
 
