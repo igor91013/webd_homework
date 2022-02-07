@@ -36,7 +36,8 @@ var data = {
     delete: "Obriši",
     cooktime: "Vreme pripreme:",
     writearew: "Ocenite recept",
-    reviews: "Ocene:"
+    reviews: "Ocene:",
+    myreviews:"Moje ocene:"
    
     
 }

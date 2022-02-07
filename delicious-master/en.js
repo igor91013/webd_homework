@@ -36,7 +36,8 @@ var data = {
     delete: "Delete",
     cooktime: "Cooking time:",
     writearew: "Write a review",
-    reviews: "Reviews:"
+    reviews: "Reviews:",
+    myreviews:"My reviews:"
 
 }
  

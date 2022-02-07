@@ -34,11 +34,11 @@ function register() {
 
     let korisnik = { username: username, password: encrpas(password) }
     
-    korisnici.push(korisnik)
+    korisnicii.push(korisnik)
 
     //sessionStorage.setItem(username, encrpas(password));
 
-    localStorage.setItem("korisnici", JSON.stringify(korisnici));
+    localStorage.setItem("korisnici", JSON.stringify(korisnicii));
     alert("uspesno ste registrovali korisnika");
 
 

@@ -314,8 +314,19 @@ textarea:focus {
       bottom: 30px;
       right: 30px; } }
 
+      .dugmerecept{
+        border-left: 0 !important;
+      }
+      .dugmerecept:hover{
+        cursor: default !important;
+        background-color: #40ba37 !important;
+        border-left: 0 !important;
+      }
+
 /* Button */
 .delicious-btn {
+
+  
   display: inline-block;
   min-width: 160px;
   height: 60px;
@@ -332,6 +343,7 @@ textarea:focus {
   text-transform: capitalize;
   background-color: #40ba37; }
   .delicious-btn.active, .delicious-btn:hover, .delicious-btn:focus {
+    
     font-size: 16px;
     font-weight: 600;
     color: #ffffff;
@@ -1383,6 +1395,8 @@ textarea:focus {
     margin-bottom: 0;
     padding-left: 30px; }
 
+
 /*# sourceMappingURL=style.css.map */
+
 
 

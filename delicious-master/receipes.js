@@ -1,228 +1,787 @@
 
 var recipes =
-    [
-        //prevodi?
-        {
-            type: "appetizer",
-            thumbnail: "images/przenice.jpg",
-            title: "Prženice",
-            date: "August 31, 2021",
-            author: "test",
-            text: "Prženice",
-            rating: "2",
-            difficulty: "1",
-            id: 1,
+[
+    {
+        id: 1,
+        type: "appetizer",
+        author: "test",
+        thumbnail: "images/przenice.jpg",
+        title: "Prženice",
+        text: "Prženice",
+        date: "August 31, 2021",
+        rating: "2",
+        difficulty: "1",
+
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
+
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                },
 
 
-            video: "",
-            cooking: "17 mins",
-            //   yields: "4 servings",
+                {
+                    user: "dime",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
 
-            preparation:
-                [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                ],
-            ingredients:
-                [
-                    "4 Tbsp (57 gr) butter",
-                    "2 large eggs",
-                    "2 yogurt containers granulated sugar",
-                    "1 vanilla or plain yogurt, 170g container",
-                    "2 yogurt containers unbleached white flour",
-                    "1.5 yogurt containers milk",
-                    "1/4 tsp cinnamon",
-                    "1 cup fresh blueberries"
-                ],
-            pictures:
-                [
-                    "przenice1.jpg",
-                    "przenice2.jpg",
-                    "przenice3.jpg"
-                ],
-            reviews:
-                [
-                    {
-                        user: "a",
-                        date: "b",
-                        rating: "3",
-                        title: "c",
-                        text: "d",
-                    }
-                ]
-        },
+    {
 
-        {
+        type: "appetizer",
+        thumbnail: "images/kacamak.jpg",
+        title: "Kačamak",
+        date: "August 31, 2021",
+        author: "MojRecept.rs",
+        text: "Kačamak",
+        rating: "5",
+        difficulty: "3",
+        id: 2,
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
 
-            type: "appetizer",
-            data: "kacamak.js",
-            thumbnail: "images/kacamak.jpg",
-            title: "Kačamak",
-            date: "August 31, 2021",
-            author: "MojRecept.rs",
-            text: "Kačamak",
-            rating: "5",
-            difficulty: "3",
-            id: 2,
-            video: "",
-            cooking: "17 mins",
-            yields: "4 servings",
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "dime",
+                    date: "4-8-2015",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "milos",
+                    date: "4-6-2020",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
 
-            preparation:
-                [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                ],
-            ingredients:
-                [
-                    "4 Tbsp (57 gr) butter",
-                    "2 large eggs",
-                    "2 yogurt containers granulated sugar",
-                    "1 vanilla or plain yogurt, 170g container",
-                    "2 yogurt containers unbleached white flour",
-                    "1.5 yogurt containers milk",
-                    "1/4 tsp cinnamon",
-                    "1 cup fresh blueberries"
-                ],
-            pictures:
-                [
-                    "przenice1.jpg",
-                    "przenice2.jpg",
-                    "przenice3.jpg"
-                ],
-            reviews:
-                [
-                    {
-                        user: "a",
-                        date: "b",
-                        rating: "3",
-                        title: "c",
-                        text: "d",
-                    },
+    {
+        id: 3,
+        type: "appetizer",
+        author: "test",
+        thumbnail: "images/proja.jpg",
+        title: "Proja",
+        text: "Proja",
+        date: "August 31, 2021",
+        rating: "2",
 
-                    {
-                        user: "a",
-                        date: "b",
-                        rating: "3",
-                        title: "c",
-                        text: "d",
-                    }
-                ]
-        },
 
-        {
-            type: "appetizer",
-            thumbnail: "images/proja.jpg",
-            title: "Proja",
-            author: "test",
-            text: "Proja",
+        difficulty: "2",
 
-            difficulty: "2",
-            id: 3,
-            reviews: []
-        },
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
 
-        {
-            type: "maincourse",
-            thumbnail: "images/sushi.jpg",
-            title: "Suši",
-            author: "MojRecept.rs",
-            text: "Suši",
-            rating: "5",
-            difficulty: "3",
-            id: 4,
-        },
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "1-8-2013",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "dime",
+                    date: "1-10-2021",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
 
-        {
-            type: "maincourse",
-            thumbnail: "images/gulas.jpg",
-            title: "Gulaš",
-            author: "MojRecept.rs",
-            text: "Gulaš",
-            rating: "3",
-            difficulty: "1",
-            id: 5,
-        },
+    {
+        type: "maincourse",
+        thumbnail: "images/sushi.jpg",
+        title: "Suši",
+        author: "MojRecept.rs",
+        text: "Suši",
+        rating: "5",
+        difficulty: "3",
+        id: 4,
 
-        {
-            type: "maincourse",
-            thumbnail: "images/musaka.jpg",
-            title: "Musaka",
-            author: "MojRecept.rs",
-            text: "Musaka",
-            rating: "4",
-            difficulty: "2",
-            id: 6,
-        },
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
 
-        {
-            type: "dessert",
-            thumbnail: "images/tulumba.jpg",
-            title: "Tulumba",
-            author: "MojRecept.rs",
-            text: "Tulumba",
-            rating: "3",
-            difficulty: "2",
-            id: 7,
-        },
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                },
 
-        {
-            type: "dessert",
-            thumbnail: "images/baklava.jpg",
-            title: "Baklava",
-            author: "MojRecept.rs",
-            text: "Baklava",
-            rating: "1",
-            difficulty: "1",
-            id: 8,
-        },
 
-        {
-            type: "dessert",
-            thumbnail: "images/bananasplit.jpg",
-            title: "Banana Split",
-            author: "MojRecept.rs",
-            text: "Banana Split",
-            rating: "5",
-            difficulty: "3",
-            id: 9,
-        },
+                {
+                    user: "dime",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
 
-        {
-            type: "snack",
-            thumbnail: "images/clubsandwich.jpg",
-            title: "Club Sandwich",
-            author: "MojRecept.rs",
-            text: "Club Sandwich",
-            rating: "5",
-            difficulty: "2",
-            id: 10,
-        },
+    {
+        type: "maincourse",
+        thumbnail: "images/gulas.jpg",
+        title: "Gulaš",
+        author: "MojRecept.rs",
+        text: "Gulaš",
+        rating: "3",
+        difficulty: "1",
+        id: 5,
 
-        {
-            type: "snack",
-            thumbnail: "images/ceasarsalad.jpg",
-            title: "Cezar salata",
-            author: "MojRecept.rs",
-            text: "Cezar salata",
-            rating: "2",
-            difficulty: "3",
-            id: 11,
-        },
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
 
-        {
-            type: "snack",
-            thumbnail: "images/fruitsalad.jpg",
-            title: "Voćna salata",
-            author: "MojRecept.rs",
-            text: "Voćna salata",
-            rating: "1",
-            difficulty: "1",
-            id: 12,
-        }
-    ]
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                },
+
+
+                {
+                    user: "dime",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
+
+    {
+        type: "maincourse",
+        thumbnail: "images/musaka.jpg",
+        title: "Musaka",
+        author: "MojRecept.rs",
+        text: "Musaka",
+        rating: "4",
+        difficulty: "2",
+        id: 6,
+
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
+
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                },
+
+
+                {
+                    user: "dime",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
+
+    {
+        type: "dessert",
+        thumbnail: "images/tulumba.jpg",
+        title: "Tulumba",
+        author: "MojRecept.rs",
+        text: "Tulumba",
+        rating: "3",
+        difficulty: "2",
+        id: 7,
+
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
+
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                },
+
+
+                {
+                    user: "dime",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
+
+    {
+        type: "dessert",
+        thumbnail: "images/baklava.jpg",
+        title: "Baklava",
+        author: "MojRecept.rs",
+        text: "Baklava",
+        rating: "1",
+        difficulty: "1",
+        id: 8,
+
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
+
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                },
+
+
+                {
+                    user: "dime",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
+
+    {
+        type: "dessert",
+        thumbnail: "images/bananasplit.jpg",
+        title: "Banana Split",
+        author: "MojRecept.rs",
+        text: "Banana Split",
+        rating: "5",
+        difficulty: "3",
+        id: 9,
+
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
+
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                },
+
+
+                {
+                    user: "dime",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
+
+    {
+        type: "snack",
+        thumbnail: "images/clubsandwich.jpg",
+        title: "Club Sandwich",
+        author: "MojRecept.rs",
+        text: "Club Sandwich",
+        rating: "5",
+        difficulty: "2",
+        id: 10,
+
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
+
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                },
+
+
+                {
+                    user: "dime",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
+
+    {
+        type: "snack",
+        thumbnail: "images/ceasarsalad.jpg",
+        title: "Cezar salata",
+        author: "MojRecept.rs",
+        text: "Cezar salata",
+        rating: "2",
+        difficulty: "3",
+        id: 11,
+
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
+
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                },
+
+
+                {
+                    user: "dime",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    },
+
+    {
+        type: "snack",
+        thumbnail: "images/fruitsalad.jpg",
+        title: "Voćna salata",
+        author: "MojRecept.rs",
+        text: "Voćna salata",
+        rating: "1",
+        difficulty: "1",
+        id: 12,
+
+        video: "",
+        cooking: "17 mins",
+        //yields: "4 servings",
+
+        preparation:
+            [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            ],
+        ingredients:
+            [
+                "4 Tbsp (57 gr) butter",
+                "2 large eggs",
+                "2 yogurt containers granulated sugar",
+                "1 vanilla or plain yogurt, 170g container",
+                "2 yogurt containers unbleached white flour",
+                "1.5 yogurt containers milk",
+                "1/4 tsp cinnamon",
+                "1 cup fresh blueberries"
+            ],
+        pictures:
+            [
+                "przenice1.jpg",
+                "przenice2.jpg",
+                "przenice3.jpg"
+            ],
+        reviews:
+            [
+                {
+                    user: "milos",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                },
+
+
+                {
+                    user: "dime",
+                    date: "2-10-2022",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                },
+                {
+                    user: "marko",
+                    date: "b",
+                    rating: "3",
+                    title: "c",
+                    text: "d",
+                }
+            ]
+    }
+]
 
 var group = null;
 var loadedRecipes = [];

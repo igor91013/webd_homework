@@ -84,6 +84,87 @@ function myProfile() {
 
 }
 
+function loadReviews()
+{
+  let username = JSON.parse(sessionStorage.getItem("ulogovan")).username;
+  let recipes = JSON.parse(localStorage.getItem("recipes"));
+  let location = document.getElementById("myreviews");
+  
+  recipes.forEach(recipe => {
+    let reviews = recipe.reviews;
+    reviews.forEach(review => {
+      if (review.user == username)
+      {
+        //Dodavanje linka koji na recept
+        let div_0 = document.createElement("div");
+        div_0.className = "row";
+          let div_0_1 = document.createElement("div");
+          div_0_1.className = "col-12";
+            let div_0_1_1 = document.createElement("a");
+            div_0_1_1.href = "receipe-post.html";
+            div_0_1_1.setAttribute("onclick", "localStorage.setItem('recipe-data', '" + JSON.stringify(recipe) + "');");
+            //localStorage.setItem("recipe-data", JSON.stringify(recipe));
+              let div_0_1_1_1 = document.createElement("h3");
+              div_0_1_1_1.innerText = recipe.title;
+              div_0_1_1.appendChild(div_0_1_1_1);
+            div_0_1.appendChild(div_0_1_1);
+          div_0.appendChild(div_0_1);
+        location.appendChild(div_0);
+
+        let div_1 = document.createElement("div");
+        div_1.className = "row ";
+        let div_1_1 = document.createElement("div");
+        //Bootstrap-ova klasa 'text-wrap' ne funkcionise, pa je uportrebljen CSS kod
+        div_1_1.className = "col-7";
+        div_1_1.style = "word-wrap:break-word;";
+          let div_1_1_1 = document.createElement("p");
+          div_1_1_1.className= "";
+          div_1_1_1.innerHTML = review.text;
+          div_1_1.appendChild(div_1_1_1);
+        div_1.appendChild(div_1_1);
+        let div_1_2 = document.createElement("div");
+        div_1_2.className = "col-4 offset-1";
+        let div_1_2_1 = document.createElement("div");
+        div_1_2_1.className = "receipe-ratings text-left";
+        let div_1_2_1_1 = document.createElement("div");
+        div_1_2_1_1.className = "ratings";
+        for (let count = 1; count <= 5; count++) {
+            let i = document.createElement("i");
+            i.className = (review.rating >= count) ? "fa fa-star" : "fa fa-star-o";
+            i.setAttribute("aria-hidden", "true");
+            div_1_2_1_1.appendChild(i);
+        }
+        div_1_2_1.appendChild(div_1_2_1_1);
+        div_1_2.appendChild(div_1_2_1);
+        div_1.appendChild(div_1_2);
+        location.appendChild(div_1);
+        
+        let div_3 = document.createElement("div");
+        div_3.className = "row";
+        let div_3_1 = document.createElement("div");
+        div_3_1.className = "col-2 font-italic";
+        let div_3_1_1 = document.createElement("a");
+        div_3_1_1.href = "#";
+        div_3_1_1.innerText = "by " + review.user;
+        div_3_1.appendChild(div_3_1_1)
+        div_3.appendChild(div_3_1);
+        let div_3_2 = document.createElement("div");
+        div_3_2.className = "col-3 offset-7";
+        let div_3_2_1 = document.createElement("p");
+        div_3_2_1.innerHTML = review.date;
+        div_3_2.appendChild(div_3_2_1);
+        div_3.appendChild(div_3_2);
+        location.appendChild(div_3);
+        //Dodavanje horizontalne linije iza svake recenzije
+        let div_4 = document.createElement("hr");
+        location.appendChild(div_4);
+      }
+    })
+  })
+  //Uklanjanje poslednje horizontalne linije iz estetskih razloga
+  location.removeChild(location.lastChild);
+}
+
 function loadProfileRecipes(rcp) {
 
 
@@ -249,12 +330,15 @@ function initMyprofile() {
   let recipess = JSON.parse(localStorage.getItem("recipes"));
 
 
-  document.getElementById("profileusername").innerText = JSON.parse(ulogovan).username;
+  document.getElementById("welcomeMessage").innerText = "Welcome " + JSON.parse(ulogovan).username + "!";
   getLanguage();
 
   if (ulogovan)
     turnoffLS();
   loadProfileRecipes(JSON.parse(localStorage.getItem("recipes")));
+
+  loadReviews();
+
 }
 
 function initAddRecipePage() {
