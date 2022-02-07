@@ -66,12 +66,15 @@ function loadRecipeData(recipeData) {
     switch (recipeData.difficulty) {
         case "1":
             difficulty.innerHTML = "Beginner";
+            difficulty.setAttribute("data-lang","beginner")
             break;
         case "2":
             difficulty.innerHTML = "Intermediate";
+            difficulty.setAttribute("data-lang","intermediate")
             break;
         case "3":
             difficulty.innerHTML = "Advanced";
+            difficulty.setAttribute("data-lang","advanced")
             break;
         default:
             alert("ERROR: Unrecognized difficulty.");

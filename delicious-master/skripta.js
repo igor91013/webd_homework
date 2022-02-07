@@ -218,7 +218,7 @@ function addRecipe() {
 }
 
 function initRecipePost() {
-  ulogovan=JSON.parse(sessionStorage.getItem("ulogovan"));
+  ulogovan = JSON.parse(sessionStorage.getItem("ulogovan"));
   let data = JSON.parse(localStorage.getItem("recipe-data"));
   loadRecipeData(data);
 
@@ -229,6 +229,8 @@ function initRecipePost() {
 
   if (ulogovan)
     turnoffLS();
+  else
+    turnonLS()
 
   setBcRp();
 }

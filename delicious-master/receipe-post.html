@@ -65,7 +65,7 @@
                 <div class="container">
 
                     <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+                    <nav class="classy-navbar justify-content-between justify-content-lg-start" id="deliciousNav">
                         <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
 
                         <!-- Logo -->
@@ -84,32 +84,28 @@
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                             </div>
 
-                            <!-- Nav Start -->
+                            
                             <div class="classynav">
                                 <ul>
                                     <li><a data-lang="home" href="index.html">Home</a></li>
-                                    <li class="active"><a data-lang="receipes" href="receipes.html"
-                                            onclick="localStorage.removeItem('group')">Receipes</a>
+                                    <li class="active"><a data-lang="receipes" href="receipes.html">Receipes</a>
                                         <ul class="dropdown" id="padajuca">
-                                            <li><a data-lang="appetizer" href="receipes.html"
-                                                    onclick="localStorage.setItem('group', 'appetizer');setBreadcrumb('appetizer')">Appetizer</a>
-                                            </li>
-                                            <li><a data-lang="maincourse" href="receipes.html"
-                                                    onclick="localStorage.setItem('group', 'maincourse');setBreadcrumb('maincourse')">Main
-                                                    course</a></li>
-                                            <li><a data-lang="dessert" href="receipes.html"
-                                                    onclick="localStorage.setItem('group', 'dessert');setBreadcrumb('dessert')">Dessert</a>
-                                            </li>
-                                            <li><a data-lang="snack" href="receipes.html"
-                                                    onclick="localStorage.setItem('group', 'snack');setBreadcrumb('snack')">Snack</a>
+                                            <li><a data-lang="appetizer" href="#"
+                                                    onclick="changeGroup('appetizer')">Appetizer</a></li>
+                                            <li><a data-lang="maincourse" href="#"
+                                                    onclick="changeGroup('maincourse')">Main course</a></li>
+                                            <li><a data-lang="dessert" href="#"
+                                                    onclick="changeGroup('dessert')">Dessert</a></li>
+                                            <li><a data-lang="snack" href="#" onclick="changeGroup('snack')">Snack</a>
                                             </li>
 
 
                                         </ul>
                                     </li>
 
-                                    <li><a data-lang="addrecipe" href="#">Add receipe</a></li>
-                                    <li><a data-lang="myprofile" href="#">My profile</a>
+                                    <li><a data-lang="addrecipe" href="addrecipe.html">Add receipe</a></li>
+                                    <li><a data-lang="myprofile" href="#" onclick="myProfile()">My
+                                            profile</a>
                                         <ul id="logsnav" class="dropdown">
                                             <li id="loginbut"><a data-lang="login" href="login.html">Log in</a>
 
@@ -118,7 +114,7 @@
                                                     out</a>
                                         </ul>
                                     </li>
-                                    <li><a data-lang="aboutus" href="#">About us</a></li>
+                                    <li><a data-lang="aboutus" href="about.html">About us</a></li>
 
                                     <li><a data-lang="language" href="#">Language</a>
                                         <ul class="dropdown">
@@ -131,14 +127,9 @@
                                     </li>
                                 </ul>
 
-                                <!-- Newsletter Form -->
-                                <div class="search-btn">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
-
-                            </div>
-                            <!-- Nav End -->
+                                
                         </div>
+
                     </nav>
                 </div>
             </div>
@@ -189,7 +180,8 @@
                                 <span id="date">April 05, 2018</span>
                                 <h2 id="title">Vegetarian cheese salad</h2>
                                 <div class="receipe-duration">
-                                    <b>Cooking time:<span id="cooking"></span></b>
+                                    <b data-lang="cooktime">Cooking time:</b>
+                                    <span id="cooking"></span>
 
                                 </div>
                             </div>
@@ -217,7 +209,7 @@
                         <!-- Ingredients -->
                         <div class="col-12 col-lg-4">
                             <div class="ingredients">
-                                <h4>Ingredients</h4>
+                                <h4 data-lang="ingredients">Ingredients</h4>
                                 <div id="ingredients">
 
                                 </div>
@@ -248,7 +240,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="text-left mt-30">
-                            <h3>Write a review</h3></span>
+                            <h3 data-lang="writearew">Write a review</h3></span>
 
 
 
@@ -293,7 +285,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section-heading text-left mt-30">
-                            <h3>Reviews</h3>
+                            <h3 data-lang="reviews">Reviews:</h3>
                         </div>
                         <div id="reviews">
 

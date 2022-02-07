@@ -34,6 +34,9 @@ var data = {
     instructions: "Instructions",
     myrecipes: "My recipes:",
     delete: "Delete",
+    cooktime: "Cooking time:",
+    writearew: "Write a review",
+    reviews: "Reviews:"
 
 }
  

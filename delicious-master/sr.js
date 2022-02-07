@@ -34,6 +34,9 @@ var data = {
     instructions: "Instrukcije",
     myrecipes: "Moji recepti:",
     delete: "Obriši",
+    cooktime: "Vreme pripreme:",
+    writearew: "Ocenite recept",
+    reviews: "Ocene:"
    
     
 }
