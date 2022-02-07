@@ -3,14 +3,14 @@ $(document).ready(function () {
     var recipe = JSON.parse(localStorage.getItem("recipe-data"));
 
 
-   // $("#recept").empty();
+    // $("#recept").empty();
 
-   /* var date = new Date(recipe.date);
-    $("#recept").append("<p>Datum: " + date.toDateString() + "</p>");
-    $("#recept").append("<h4>Ime recepta: " + recipe.title + "</h4>");
-
-
-    $("#recept").append("<p>Trajanje: " + recipe.cooking + "</p>");*/
+    /* var date = new Date(recipe.date);
+     $("#recept").append("<p>Datum: " + date.toDateString() + "</p>");
+     $("#recept").append("<h4>Ime recepta: " + recipe.title + "</h4>");
+ 
+ 
+     $("#recept").append("<p>Trajanje: " + recipe.cooking + "</p>");*/
 
 
 
@@ -66,15 +66,15 @@ function loadRecipeData(recipeData) {
     switch (recipeData.difficulty) {
         case "1":
             difficulty.innerHTML = "Beginner";
-            difficulty.setAttribute("data-lang","beginner")
+            difficulty.setAttribute("data-lang", "beginner")
             break;
         case "2":
             difficulty.innerHTML = "Intermediate";
-            difficulty.setAttribute("data-lang","intermediate")
+            difficulty.setAttribute("data-lang", "intermediate")
             break;
         case "3":
             difficulty.innerHTML = "Advanced";
-            difficulty.setAttribute("data-lang","advanced")
+            difficulty.setAttribute("data-lang", "advanced")
             break;
         default:
             alert("ERROR: Unrecognized difficulty.");
@@ -82,7 +82,7 @@ function loadRecipeData(recipeData) {
 
     //General info
     document.getElementById("cooking").innerHTML = recipeData.cooking;
-   // document.getElementById("yields").innerHTML = recipeData.yields;
+    // document.getElementById("yields").innerHTML = recipeData.yields;
 
     //Preparation steps
     let steps = recipeData.preparation;
@@ -281,9 +281,13 @@ function setBcRp() {
     a3 = document.createElement("a");
     a4 = document.createElement("a");
 
+    let group = (JSON.parse(localStorage.getItem("recipe-data"))).type;
+
     a1.setAttribute("href", "index.html");
     a2.setAttribute("href", "receipes.html");
-    a3.setAttribute("href", "#");
+    a2.onclick = () => { localStorage.removeItem("group") }
+    a3.setAttribute("href", "receipes.html");
+    a3.onclick = () => { localStorage.setItem("group", group) }
     a1.setAttribute("data-lang", "home");
     a2.setAttribute("data-lang", "receipes");
     a4.setAttribute("href", "#");
@@ -310,7 +314,7 @@ function setBcRp() {
 
 
 
-    let group = (JSON.parse(localStorage.getItem("recipe-data"))).type;
+
 
     a3.appendChild(document.createTextNode(group));
     a3.setAttribute("data-lang", group);

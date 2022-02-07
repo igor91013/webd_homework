@@ -244,7 +244,7 @@ function removeRecipes() {
 
 function setBreadcrumb() {
     let gr = localStorage.getItem("group");
-    console.log(gr)
+    
     let ul = document.createElement("ul");
     ul.className = "breadcrumbs";
     let li1 = document.createElement("li");
@@ -258,7 +258,8 @@ function setBreadcrumb() {
     a3 = document.createElement("a");
 
     a1.setAttribute("href", "index.html");
-    a2.setAttribute("href", "#");
+    a2.setAttribute("href", "receipes.html");
+    a2.onclick=()=>{localStorage.removeItem("group")}
     a3.setAttribute("href", "#");
     a1.setAttribute("data-lang", "home");
     a2.setAttribute("data-lang", "receipes");
@@ -322,9 +323,9 @@ function setBreadcrumb() {
 
     bc.appendChild(ul);
 
-    for (const property in data) {
+  /*  for (const property in data) {
         $("body").find(`[data-lang="${property}"]`).text(data[property])
-    }
+    }*/
 
 }
 
