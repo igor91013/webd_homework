@@ -31,14 +31,26 @@ $(document).ready(function () {
 
 function loadRecipeData(recipeData) {
     let language = localStorage.getItem("language");
-
-    // Pictures
-
-    for (let i = 1; i <= 3; i++) {
-        let picture = document.getElementById("img" + i);
-        if (recipeData.pictures) {
-            picture.src = "images/" + recipeData.pictures[i - 1];
+    if (recipeData.pictures) {
+        for(let i=0;i<recipeData.pictures.length;i++){
+            
+        document.getElementById("img"+JSON.stringify(i+1)).src = "images/" + recipeData.pictures[i];
+        
+        
         }
+
+        // Pictures
+
+        for (let i = 1; i <= 3; i++) {
+            let picture = document.getElementById("img" + i);
+            if (recipeData.pictures) {
+                picture.src = "images/" + recipeData.pictures[i - 1];
+            }
+
+        }
+    }
+    else{
+        document.getElementById("galerija").style.display = "none";
 
     }
 
@@ -230,11 +242,12 @@ executeRating(ratingStars);
 
 
 function addReview() {
+
     if (!sessionStorage.getItem("ulogovan"))
         return alert("Morate biti ulogovani");
     let idRec = JSON.parse(localStorage.getItem("recipe-data")).id;
     let text = document.getElementById("message").value;
-    let rating = Number(document.getElementById("userStarRating").textContent);
+    let rating = document.getElementById("userStarRating").textContent
     let today = new Date();
     let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear()
 
@@ -248,20 +261,21 @@ function addReview() {
 
 
     let recipes = JSON.parse(localStorage.getItem("recipes"));
-    (recipes[idRec].reviews).push(review);
+
+    (recipes[idRec - 1].reviews).push(review);
 
     let helpArray = []
 
-    recipes[idRec].reviews.forEach(review => {
-        helpArray.push(review.rating)
+    recipes[idRec - 1].reviews.forEach(review => {
+        helpArray.push(parseInt(review.rating))
     })
     let sum = 0
     helpArray.forEach(el => { sum += el })
 
-    let middleRating = sum / (recipes[idRec].reviews.length);
-    recipes[idRec].rating = middleRating.toFixed(2);
+    let middleRating = sum / (recipes[idRec - 1].reviews.length);
+    recipes[idRec - 1].rating = middleRating.toFixed(2);
     localStorage.setItem("recipes", JSON.stringify(recipes));
-    localStorage.setItem("recipe-data", JSON.stringify(recipes[idRec]));
+    localStorage.setItem("recipe-data", JSON.stringify(recipes[idRec - 1]));
     document.location.reload()
 }
 

@@ -37,7 +37,8 @@ var data = {
     cooktime: "Vreme pripreme:",
     writearew: "Ocenite recept",
     reviews: "Ocene:",
-    myreviews:"Moje ocene:"
+    myreviews:"Moje ocene:",
+    others: "Drugima je ispalo ovako:"
    
     
 }

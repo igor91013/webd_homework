@@ -31,7 +31,7 @@ function initHomePage() {
   if (sessionStorage.getItem("ulogovan"))
     turnoffLS();
 
-
+    loadBestRecipes()
 }
 
 function initReceipesPage() {
@@ -266,7 +266,7 @@ function addRecipe() {
   let ulogovan = sessionStorage.getItem("ulogovan");
   let author = JSON.parse(ulogovan).username;
 
-  let idRec = JSON.parse(localStorage.getItem("recipes")).length;
+  let idRec = JSON.parse(localStorage.getItem("recipes")).length+1;
   let title = document.getElementById('rectitle').value;
   let text = document.getElementById('rectext').value;
 

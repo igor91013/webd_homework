@@ -37,7 +37,8 @@ var data = {
     cooktime: "Cooking time:",
     writearew: "Write a review",
     reviews: "Reviews:",
-    myreviews:"My reviews:"
+    myreviews:"My reviews:",
+    others: "Others prepared like this:"
 
 }
  

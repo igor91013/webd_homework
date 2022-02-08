@@ -9,7 +9,7 @@ var recipes =
         title: "Prženice",
         text: "Prženice",
         date: "August 31, 2021",
-        rating: "2",
+        rating: "2.00",
         difficulty: "1",
 
         video: "",
@@ -44,23 +44,23 @@ var recipes =
                 {
                     user: "milos",
                     date: "2-10-2022",
-                    rating: "3",
+                    rating: "2",
                     title: "c",
-                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                    text: "Nesto",
                 },
 
 
                 {
                     user: "dime",
                     date: "2-10-2022",
-                    rating: "3",
+                    rating: "2",
                     title: "c",
                     text: "d",
                 },
                 {
                     user: "marko",
                     date: "b",
-                    rating: "3",
+                    rating: "2",
                     title: "c",
                     text: "d",
                 }
@@ -75,7 +75,7 @@ var recipes =
         date: "August 31, 2021",
         author: "MojRecept.rs",
         text: "Kačamak",
-        rating: "5",
+        rating: "4.50",
         difficulty: "3",
         id: 2,
         video: "",
@@ -139,7 +139,7 @@ var recipes =
         title: "Proja",
         text: "Proja",
         date: "August 31, 2021",
-        rating: "2",
+        rating: "2.48",
 
 
         difficulty: "2",
@@ -176,21 +176,21 @@ var recipes =
                 {
                     user: "milos",
                     date: "1-8-2013",
-                    rating: "3",
+                    rating: "4",
                     title: "c",
                     text: "d",
                 },
                 {
                     user: "marko",
                     date: "b",
-                    rating: "3",
+                    rating: "1",
                     title: "c",
                     text: "d",
                 },
                 {
                     user: "dime",
                     date: "1-10-2021",
-                    rating: "3",
+                    rating: "1",
                     title: "c",
                     text: "d",
                 }
@@ -203,7 +203,7 @@ var recipes =
         title: "Suši",
         author: "MojRecept.rs",
         text: "Suši",
-        rating: "5",
+        rating: "4.90",
         difficulty: "3",
         id: 4,
 
@@ -241,7 +241,7 @@ var recipes =
                     date: "2-10-2022",
                     rating: "3",
                     title: "c",
-                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                    text: "Nesto",
                 },
 
 
@@ -268,7 +268,7 @@ var recipes =
         title: "Gulaš",
         author: "MojRecept.rs",
         text: "Gulaš",
-        rating: "3",
+        rating: "3.40",
         difficulty: "1",
         id: 5,
 
@@ -306,7 +306,7 @@ var recipes =
                     date: "2-10-2022",
                     rating: "3",
                     title: "c",
-                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                    text: "Nesto",
                 },
 
 
@@ -333,7 +333,7 @@ var recipes =
         title: "Musaka",
         author: "MojRecept.rs",
         text: "Musaka",
-        rating: "4",
+        rating: "4.50",
         difficulty: "2",
         id: 6,
 
@@ -371,7 +371,7 @@ var recipes =
                     date: "2-10-2022",
                     rating: "3",
                     title: "c",
-                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                    text: "Nesto",
                 },
 
 
@@ -398,7 +398,7 @@ var recipes =
         title: "Tulumba",
         author: "MojRecept.rs",
         text: "Tulumba",
-        rating: "3",
+        rating: "3.20",
         difficulty: "2",
         id: 7,
 
@@ -436,7 +436,7 @@ var recipes =
                     date: "2-10-2022",
                     rating: "3",
                     title: "c",
-                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                    text: "Nesto",
                 },
 
 
@@ -463,7 +463,7 @@ var recipes =
         title: "Baklava",
         author: "MojRecept.rs",
         text: "Baklava",
-        rating: "1",
+        rating: "1.80",
         difficulty: "1",
         id: 8,
 
@@ -501,7 +501,7 @@ var recipes =
                     date: "2-10-2022",
                     rating: "3",
                     title: "c",
-                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                    text: "Nesto",
                 },
 
 
@@ -528,7 +528,7 @@ var recipes =
         title: "Banana Split",
         author: "MojRecept.rs",
         text: "Banana Split",
-        rating: "5",
+        rating: "4.75",
         difficulty: "3",
         id: 9,
 
@@ -566,7 +566,7 @@ var recipes =
                     date: "2-10-2022",
                     rating: "3",
                     title: "c",
-                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                    text: "Nesto",
                 },
 
 
@@ -593,7 +593,7 @@ var recipes =
         title: "Club Sandwich",
         author: "MojRecept.rs",
         text: "Club Sandwich",
-        rating: "5",
+        rating: "3.30",
         difficulty: "2",
         id: 10,
 
@@ -631,7 +631,7 @@ var recipes =
                     date: "2-10-2022",
                     rating: "3",
                     title: "c",
-                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                    text: "Nesto",
                 },
 
 
@@ -658,7 +658,7 @@ var recipes =
         title: "Cezar salata",
         author: "MojRecept.rs",
         text: "Cezar salata",
-        rating: "2",
+        rating: "3.50",
         difficulty: "3",
         id: 11,
 
@@ -696,7 +696,7 @@ var recipes =
                     date: "2-10-2022",
                     rating: "3",
                     title: "c",
-                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                    text: "Nesto",
                 },
 
 
@@ -723,7 +723,7 @@ var recipes =
         title: "Voćna salata",
         author: "MojRecept.rs",
         text: "Voćna salata",
-        rating: "1",
+        rating: "4.60",
         difficulty: "1",
         id: 12,
 
@@ -761,7 +761,7 @@ var recipes =
                     date: "2-10-2022",
                     rating: "3",
                     title: "c",
-                    text: "ldkafjofjoajdfjafdjajfklajdlkjfajfajsldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfaldkafjofjoajdfjafdjajfklajdlkjfajfajsdfijaofjoiadfadfijaofjoiadfa",
+                    text: "Nesto",
                 },
 
 
@@ -944,7 +944,7 @@ function loadRecipes(rcp) {
             p1.innerHTML = recipe.text;
             let a2 = document.createElement("a");
             a2.href = "#";
-            a2.className = "btn delicious-btn m-1";
+            a2.className = "btn delicious-btn m-1 dugmerecept";
             switch (recipe.difficulty) {
                 case "1": a2.innerHTML = "beginner";
                     a2.setAttribute("data-lang", "beginner")
